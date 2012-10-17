@@ -1,0 +1,121 @@
+﻿.scContentControlMultilist:focus
+{
+	border:1px solid #CCCCCC;
+}
+
+.velirItem
+{
+	clear:both;
+	position:relative;
+	overflow:hidden;
+}
+
+.velirFieldSelected, .velirFieldUnSelected
+{
+	padding-right:30px;
+	border:none!important;
+	float:left; 
+}
+
+.velirItem a
+{
+	padding:2px 3px 2px 1px;
+	border:1px solid white;
+}
+
+.velirFieldUnSelected a:hover, .velirFieldSelected a:hover, .velirFieldUnSelected.selected a, .velirFieldSelected.selected a
+{
+	padding:2px 3px 2px 1px;
+	border:1px solid #99DEFD;
+	background:url("/sitecore/shell/themes/standard/Images/Tree/TreeNodeActiveBackground.png") repeat-x scroll 0 0 #D5EFFC;
+}
+
+.velirFieldSelected a, .velirFieldUnSelected a
+{
+	display:block;
+}
+
+.removeSelectedItem, .addSelectedItem
+{
+	float:right;
+	margin-top:4px;
+}
+
+.addRemoveButton a
+{
+	border:none;
+}
+
+.addRemoveButton
+{
+	margin-top:4px;
+	padding-left:5px;
+	float:right;
+}
+
+.unSelectedItems .addRemoveButton
+{
+	background-image:url('/sitecore modules/shell/field suite/images/add.png');
+	background-repeat:no-repeat;
+}
+
+.selectedItems .addRemoveButton
+{
+	background-image:url('/sitecore modules/shell/field suite/images/forbidden.png');
+	background-repeat:no-repeat;
+}
+
+.selectedItems
+{
+	position:relative;
+}
+
+.selectedItems, .unSelectedItems
+{
+	font-size:13.33px;
+	font-family:Verdana;
+	border:1px solid #CCCCCC;
+	padding:3px;
+	height:175px;
+	overflow-y:scroll;
+}
+
+.selectedItems:focus, .unSelectedItems:focus
+{
+	font-size:13.33px;
+	font-family:Verdana;
+}
+
+.velirFieldButtons
+{
+	padding:5px 0 5px 0;
+}
+
+.velirFieldButtons scContentButton
+{
+	padding-left:0px;
+}
+
+.allSpan
+{
+	padding-left:2px;
+}
+
+.velirField .scContentButtons 
+{
+	display:none;
+}
+
+.fieldGutterItem
+{
+	display:block;
+	float:left;
+	padding-top:3px;
+	padding-right:3px;
+	border:0;
+}
+
+.itemComparerGutterLink
+{
+	display:block;
+}

@@ -1,0 +1,19 @@
+﻿.velirDroplinkOption
+{
+	padding: 3px 3px 3px 18px;
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+
+.velirDroplink select
+{
+	height:20px;
+}
+
+.droplinkTemplateIconItem
+{
+	display:block;
+	float:left;
+	padding-top:3px;
+	padding-right:3px;
+}
