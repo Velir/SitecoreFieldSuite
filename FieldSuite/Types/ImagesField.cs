@@ -261,10 +261,14 @@ namespace FieldSuite.Types
 			}
 
 			//setup description
-			string description = fieldSuiteImage.Title;
-			if (description.Length > 13)
+			string description = string.Empty;
+			if (!string.IsNullOrEmpty(fieldSuiteImage.Title))
 			{
-				description = description.Substring(0, 13) + "...";
+				description = fieldSuiteImage.Title;
+				if (description.Length > 13)
+				{
+					description = description.Substring(0, 13) + "...";
+				}
 			}
 
 			listItem.Text = description;

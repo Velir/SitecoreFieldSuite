@@ -26,6 +26,8 @@ namespace FieldSuite.Types
 {
 	public class Treelist : AFieldSuiteField
 	{
+		private Database _database;
+
 		/// <summary>
 		/// Current Field Type
 		/// </summary>
@@ -49,22 +51,61 @@ namespace FieldSuite.Types
 			}
 		}
 
+		public Database RenderingDatabase
+		{
+			get
+			{
+				if(_database != null)
+				{
+					return _database;
+				}
+
+				_database = Sitecore.Context.ContentDatabase;
+
+				string databaseName = StringUtil.ExtractParameter("databasename", this.Source).Trim().ToLower();
+				if(!string.IsNullOrEmpty(databaseName))
+				{
+					databaseName = databaseName.Trim().ToLower();
+					_database = Sitecore.Data.Database.GetDatabase(databaseName);
+					return _database;
+				}
+
+				return _database;
+			}
+		}
+
 		protected override void OnLoad(EventArgs args)
 		{
+			Assert.ArgumentNotNull(args, "args");
 			if (!Sitecore.Context.ClientPage.IsEvent)
 			{
-				FieldSuiteTreeviewEx ex = new FieldSuiteTreeviewEx();
-				ex.ID = this.ID + "_all";
-				ex.ParentId = this.ID;
+				this.SetProperties();
+				this.GetControlAttributes();
+				base.SetViewStateString("ID", this.ID);
+
+				FieldSuiteTreeviewEx ex = new FieldSuiteTreeviewEx
+				{
+					ID = this.ID + "_all"
+				};
+
 				this.Controls.Add(ex);
+				ex.ParentId = this.ID;
+				ex.DblClick = this.ID + ".Add";
 				ex.AllowDragging = false;
-				ex.Enabled = true;
+				ex.Enabled = !ReadOnly;
+
 				DataContext context = new DataContext();
 				this.Controls.Add(context);
-				context.ID = Sitecore.Web.UI.HtmlControls.Control.GetUniqueID("D");
-				SetProperties();
+				context.ID = GetUniqueID("D");
 				context.Filter = this.FormTemplateFilterForDisplay();
 				ex.DataContext = context.ID;
+				context.DataViewName = "Master";
+				if (!string.IsNullOrEmpty(this.DatabaseName))
+				{
+					context.Parameters = "databasename=" + this.DatabaseName;
+				}
+				context.Root = this.DataSource;
+				ex.ShowRoot = true;
 
 				if (!string.IsNullOrEmpty(ExcludeTemplatesForSelection))
 				{
@@ -97,21 +138,6 @@ namespace FieldSuite.Types
 
 					ex.IncludeTemplatesForSelection = templates;
 				}
-
-				string databaseName = "Master";
-
-				if(!string.IsNullOrEmpty(this.DatabaseName))
-				{
-					databaseName = this.DatabaseName;
-				}
-				else if(Sitecore.Context.ContentDatabase != null && !string.IsNullOrEmpty(Sitecore.Context.ContentDatabase.Name))
-				{
-					databaseName = databaseName.Substring(0, 1).ToUpper() + databaseName.Substring(1, databaseName.Length - 1);
-				}
-
-				context.DataViewName = databaseName;
-				context.Root = this.DataSource;
-				ex.ShowRoot = true;
 			}
 
 			base.OnLoad(args);
@@ -190,7 +216,7 @@ namespace FieldSuite.Types
 			FieldSuiteListItem listItem = new FieldSuiteListItem();
 			listItem.ShowAddRemoveButton = true;
 
-			Item item = Sitecore.Context.ContentDatabase.GetItem(itemId);
+			Item item = RenderingDatabase.GetItem(itemId);
 			if (item.IsNull())
 			{
 				return listItem.RenderItemNotFound(itemId, this.ID);
@@ -465,7 +491,7 @@ namespace FieldSuite.Types
 			}
 		}
 
-		private void SetProperties()
+		protected void SetProperties()
 		{
 			string @string = StringUtil.GetString(new string[1]
       {
@@ -489,7 +515,7 @@ namespace FieldSuite.Types
 				this.DataSource = this.Source;
 		}
 
-		private string FormTemplateFilterForDisplay()
+		protected string FormTemplateFilterForDisplay()
 		{
 			if (string.IsNullOrEmpty(this.IncludeTemplatesForDisplay) && string.IsNullOrEmpty(this.ExcludeTemplatesForDisplay) && (string.IsNullOrEmpty(this.IncludeItemsForDisplay) && string.IsNullOrEmpty(this.ExcludeItemsForDisplay)))
 				return string.Empty;

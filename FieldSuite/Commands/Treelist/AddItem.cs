@@ -37,6 +37,11 @@ namespace FieldSuite.Commands.Treelist
 			string fieldid = context.Parameters["fieldid"];
 			string excludedTemplates = context.Parameters["excludedTemplates"];
 			string includedTemplates = context.Parameters["includedTemplates"];
+			string database = context.Parameters["database"];
+			if(string.IsNullOrEmpty(database))
+			{
+				database = string.Empty;
+			}
 
 			if (string.IsNullOrEmpty(fieldid))
 			{
@@ -44,7 +49,7 @@ namespace FieldSuite.Commands.Treelist
 			}
 
 			//is this item available to be added?
-			if (!IsAvailableToBeAdded(itemid, excludedTemplates, includedTemplates))
+			if (!IsAvailableToBeAdded(itemid, excludedTemplates, includedTemplates, database))
 			{
 				return;
 			}
@@ -53,6 +58,7 @@ namespace FieldSuite.Commands.Treelist
 			nv.Add("fieldid", fieldid);
 			nv.Add("currentid", currentItem.ID.ToString());
 			nv.Add("additemid", itemid);
+			nv.Add("database", database);
 
 			Context.ClientPage.Start(this, "RunAddForm", nv);
 		}
@@ -63,7 +69,7 @@ namespace FieldSuite.Commands.Treelist
 		/// <param name="args"></param>
 		public void RunAddForm(ClientPipelineArgs args)
 		{
-			string html = RenderItem(args.Parameters["additemid"], args.Parameters["fieldid"]);
+			string html = RenderItem(args.Parameters["additemid"], args.Parameters["fieldid"], args.Parameters["database"]);
 			if (string.IsNullOrEmpty(html))
 			{
 				return;
@@ -71,12 +77,19 @@ namespace FieldSuite.Commands.Treelist
 
 			html = HttpUtility.HtmlEncode(html);
 
+			Sitecore.Context.ClientPage.Modified = true;
 			SheerResponse.Eval("FieldSuite.Fields.Treelist.AddItemToContent(\"" + args.Parameters["fieldid"] + "\",\"" + html + "\")");
 		}
 
-		private bool IsAvailableToBeAdded(string itemId, string excludedTemplates, string includedTemplates)
+		private bool IsAvailableToBeAdded(string itemId, string excludedTemplates, string includedTemplates, string database)
 		{
-			Item item = Context.ContentDatabase.GetItem(itemId);
+			Database db = Context.ContentDatabase;
+			if(!string.IsNullOrEmpty(database))
+			{
+				db = Database.GetDatabase(database);
+			}
+
+			Item item = db.GetItem(itemId);
 			if(item.IsNull() || item.Template == null)
 			{
 				return false;
@@ -110,18 +123,24 @@ namespace FieldSuite.Commands.Treelist
 		/// <param name="itemId"></param>
 		/// <param name="fieldId"></param>
 		/// <returns></returns>
-		public virtual string RenderItem(string itemId, string fieldId)
+		public virtual string RenderItem(string itemId, string fieldId, string database)
 		{
 			if (string.IsNullOrEmpty(itemId) || string.IsNullOrEmpty(fieldId))
 			{
 				return string.Empty;
 			}
 
+			Database db = Context.ContentDatabase;
+			if (!string.IsNullOrEmpty(database))
+			{
+				db = Database.GetDatabase(database);
+			}
+
 			FieldSuiteListItem listItem = new FieldSuiteListItem();
 			listItem.ShowAddRemoveButton = true;
 
 			//attempt to get item from sitecore
-			Item item = Context.ContentDatabase.GetItem(itemId);
+			Item item = db.GetItem(itemId);
 			if (item.IsNull())
 			{
 				//return not found list item template

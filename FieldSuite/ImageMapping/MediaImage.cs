@@ -5,19 +5,25 @@ using System.Text;
 using Sitecore.Resources.Media;
 
 using Sitecore.Data.Items;
+using Velir.SitecoreLibrary.Extensions;
 
 namespace FieldSuite.ImageMapping
 {
-	public class MediaImage : IFieldSuiteImage
+	public class MediaImage : AFieldSuiteImage
 	{
-		public MediaImage(Item item, string titleField, string imageField)
+		public MediaImage(FieldSuiteImageArgs args) : base(args)
 		{
-			if (item == null)
+			if (args == null || args.InnerItem.IsNull())
 			{
 				return;
 			}
 
-			MediaItem mediaItem = item;
+			if(!args.InnerItem.Paths.IsMediaItem)
+			{
+				return;
+			}
+
+			MediaItem mediaItem = args.InnerItem;
 
 			MediaUrlOptions options = new MediaUrlOptions();
 			options.AbsolutePath = true;
@@ -26,15 +32,5 @@ namespace FieldSuite.ImageMapping
 			Title = mediaItem.DisplayName;
 			ImageUrl = MediaManager.GetMediaUrl(mediaItem, options);
 		}
-
-		/// <summary>
-		/// Title Field
-		/// </summary>
-		public string Title { get; set; }
-
-		/// <summary>
-		/// Image Url
-		/// </summary>
-		public string ImageUrl{ get; set; }
 	}
 }

@@ -19,7 +19,7 @@ using DateTime = Sitecore.Shell.Applications.ContentEditor.DateTime;
 
 namespace FieldSuite
 {
-	public class AFieldSuiteField : MultilistEx, IFieldSuiteField
+	public abstract class AFieldSuiteField : MultilistEx, IFieldSuiteField
 	{
 		private Item _fieldTypeItem;
 		private Item _currentItem;
@@ -162,8 +162,9 @@ namespace FieldSuite
 
 					fieldValues = fieldValues.Where(x => !string.IsNullOrEmpty(x)).ToList();
 
-					_selectedItems = fieldValues;
-					return _selectedItems;
+					_selectedItems = new List<string>();
+					_selectedItems.AddRange(fieldValues);
+					return fieldValues;
 				}
 			}
 			set
@@ -232,20 +233,24 @@ namespace FieldSuite
 			StringBuilder sb = new StringBuilder();
 			sb.Append(string.Format("<div id=\"{0}_SelectedItems\" class=\"selectedItems\">", this.ID));
 
-			foreach (string selectedItemId in SelectedItems)
+			List<string> selectedItems = SelectedItems;
+			if (selectedItems != null && selectedItems.Count > 0)
 			{
-				if (string.IsNullOrEmpty(selectedItemId))
+				foreach (string selectedItemId in SelectedItems)
 				{
-					continue;
-				}
+					if (string.IsNullOrEmpty(selectedItemId))
+					{
+						continue;
+					}
 
-				string renderHtml = RenderItem(selectedItemId, true);
-				if (string.IsNullOrEmpty(renderHtml))
-				{
-					continue;
-				}
+					string renderHtml = RenderItem(selectedItemId, true);
+					if (string.IsNullOrEmpty(renderHtml))
+					{
+						continue;
+					}
 
-				sb.Append(renderHtml);
+					sb.Append(renderHtml);
+				}
 			}
 
 			sb.Append("</div>");

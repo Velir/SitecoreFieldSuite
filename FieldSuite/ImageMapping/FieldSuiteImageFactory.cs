@@ -84,18 +84,7 @@ namespace FieldSuite.ImageMapping
 
 			if (node.Attributes["type"] != null && !string.IsNullOrEmpty(node.Attributes["type"].Value))
 			{
-				string imageField = null;
-				if(node.Attributes["imageField"] != null)
-				{
-					imageField = node.Attributes["imageField"].Value;
-				}
-				string titleField = null;
-				if (node.Attributes["titleField"] != null)
-				{
-					titleField = node.Attributes["titleField"].Value;
-				}
-
-				return GetItem_FromReflection(node, currentItem, titleField, imageField);
+				return GetItem_FromReflection(node, currentItem);
 			}
 
 			return null;
@@ -109,7 +98,7 @@ namespace FieldSuite.ImageMapping
 		/// <param name="titleField"></param>
 		/// <param name="imagefield"></param>
 		/// <returns></returns>
-		private static IFieldSuiteImage GetItem_FromReflection(XmlNode node, Item currentItem, string titleField, string imagefield)
+		private static IFieldSuiteImage GetItem_FromReflection(XmlNode node, Item currentItem)
 		{
 			//verify we can break up the type string into a namespace and assembly name
 			string[] split = node.Attributes["type"].Value.Split(',');
@@ -131,10 +120,12 @@ namespace FieldSuite.ImageMapping
 				return null;
 			}
 
-			object[] parameters = new object[3];
-			parameters[0] = currentItem;
-			parameters[1] = titleField;
-			parameters[2] = imagefield;
+			FieldSuiteImageArgs args = new FieldSuiteImageArgs();
+			args.InnerItem = currentItem;
+			args.Node = node;
+
+			object[] parameters = new object[1];
+			parameters[0] = args;
 
 			//cast to validator class
 			IFieldSuiteImage fieldSuiteImage = (IFieldSuiteImage)Activator.CreateInstance(type, parameters);
