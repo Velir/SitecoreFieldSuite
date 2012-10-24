@@ -3,12 +3,14 @@
     <metadata>
       <PackageName>Field Suite</PackageName>
       <Author>Tim Braga</Author>
-      <Version>20121017</Version>
+      <Version>20121023</Version>
       <Revision />
       <License />
       <Comment />
       <Attributes />
-      <Readme />
+      <Readme>Please read and understand the Field Suite's Instructional Guide.  This will help you in understanding the functionality provided as well as how to make customizations to the module.  You can find the guide on the Velir Blog (http://blog.velir.com).
+
+This file will overwrite the Content Manager's default.aspx file during the installation process.  </Readme>
       <Publisher />
       <PostStep />
       <PackageID />
@@ -75,7 +77,16 @@
       <SkipVersions>False</SkipVersions>
       <Converter>
         <ItemToEntryConverter>
-          <Transforms />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
         </ItemToEntryConverter>
       </Converter>
       <Include />
@@ -121,6 +132,8 @@
         <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.Droplink.css</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.Images.css</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.Treelist.css</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Add Form.xml</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Edit Form.xml</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>

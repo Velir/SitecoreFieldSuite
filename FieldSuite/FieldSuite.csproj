@@ -53,11 +53,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Velir.SitecoreLibrary">
-      <HintPath>..\..\..\Velir.SitecoreLibrary\Trunk\Src\Velir.SitecoreLibrary\obj\Debug\Velir.SitecoreLibrary.dll</HintPath>
+    <Reference Include="Velir.SitecoreLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Velir\Velir.SitecoreLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Velir.SitecoreLibrary.Modules.PublishedItemComparer">
-      <HintPath>..\..\..\Velir.SitecoreLibrary\Trunk\Src\Velir.SitecoreLibrary.Modules.PublishedItemComparer\obj\Debug\Velir.SitecoreLibrary.Modules.PublishedItemComparer.dll</HintPath>
+    <Reference Include="Velir.SitecoreLibrary.Modules.PublishedItemComparer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Velir\Velir.SitecoreLibrary.Modules.PublishedItemComparer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
