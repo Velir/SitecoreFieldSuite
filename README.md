@@ -3,9 +3,8 @@ SitecoreFieldSuite
 
 Author: Tim Braga
 
-Email: tim.braga@velir.com
-
-Twitter: @tbraga01
+<br/>Email: tim.braga@velir.com
+<br/>Twitter: @tbraga01
 
 The Field Suite module provides Sitecore users a more streamlined and informational approach to content authoring.  This is achieved by 
 revamping 5 field types, introducing an Images field, enabling automatic publishing of referenced items and adding new functionality such
@@ -25,6 +24,5 @@ The Field Suite provides the following functionality:
 
 Install the Package (You need to sign into Sitecore's Marketplace): [Sitecore Marketplace](http://marketplace.sitecore.net/Modules/Field_Suite.aspx)
 
-Download the [Instructional Guide:](http://blog.velir.com/wp-content/uploads/2012/10/Field-Suite-Instructional-Guide1.pdf)
-
-[Blog Post:](http://blog.velir.com/?p=2538)
+<br/>Download the [Instructional Guide:](http://blog.velir.com/wp-content/uploads/2012/10/Field-Suite-Instructional-Guide1.pdf)
+<br/>[Blog Post:](http://blog.velir.com/?p=2538)
