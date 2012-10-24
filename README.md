@@ -2,7 +2,6 @@ SitecoreFieldSuite
 ==================
 
 Author: Tim Braga
-
 <br/>Email: tim.braga@velir.com
 <br/>Twitter: @tbraga01
 
@@ -23,6 +22,5 @@ The Field Suite provides the following functionality:
 * Introduction of the Images Field type
 
 Install the Package (You need to sign into Sitecore's Marketplace): [Sitecore Marketplace](http://marketplace.sitecore.net/Modules/Field_Suite.aspx)
-
 <br/>Download the [Instructional Guide:](http://blog.velir.com/wp-content/uploads/2012/10/Field-Suite-Instructional-Guide1.pdf)
 <br/>[Blog Post:](http://blog.velir.com/?p=2538)
