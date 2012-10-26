@@ -342,7 +342,7 @@ FieldSuite.Fields.MoveItemUp = function (fieldId) {
 		return;
 	}
 
-	var currentElement = selectedItems[0];
+	var currentElement = $(selectedItems[0]);
 
 	var previousElement = currentElement.previous();
 	if (previousElement == null) {
@@ -371,7 +371,7 @@ FieldSuite.Fields.MoveItemDown = function (fieldId) {
 		return;
 	}
 
-	var currentElement = selectedItems[0];
+	var currentElement = $(selectedItems[0]);
 
 	var nextElement = currentElement.next();
 	if (nextElement == null) {
