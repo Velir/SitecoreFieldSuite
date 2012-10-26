@@ -3,7 +3,7 @@
     <metadata>
       <PackageName>Field Suite</PackageName>
       <Author>Tim Braga</Author>
-      <Version>20121023</Version>
+      <Version>20121026</Version>
       <Revision />
       <License />
       <Comment />
@@ -134,6 +134,7 @@ This file will overwrite the Content Manager's default.aspx file during the inst
         <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.Treelist.css</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Add Form.xml</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Edit Form.xml</x-item>
+        <x-item>/sitecore/shell/Applications/Content Manager/FieldEditor.aspx</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
