@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+	<FieldSuiteAddForm>
+		<FormPage>
+			<CodeBeside Type="FieldSuite.CustomSitecore.Applications.FieldSuiteAddForm,FieldSuite"/>
+			<Stylesheet Src="/sitecore/shell/themes/standard/Internet Explorer/default.css"/>
+			<Stylesheet Src="/sitecore/shell/themes/standard/default/Content Manager.css"/>
+			<Stylesheet Src="/sitecore/shell/themes/standard/Internet Explorer/Content Manager.css"/>
+			<Stylesheet Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.css"/>
+			<Stylesheet Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.images.css"/>
+			<Stylesheet Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.droplink.css"/>
+
+			<Script Src="/sitecore/shell/Applications/Content Manager/Content Editor.js" Type="text/javascript" />
+			<Script Src="/sitecore/shell/Controls/TreeviewEx/TreeviewEx.js" Type="text/javascript"/>
+
+			<Stylesheet>
+				form { background: none repeat scroll 0 0 #F0F1F2;}
+				.scEditor
+				{
+				height:500px;
+				overflow-y:scroll;
+				}
+
+				#contentPanel{
+				padding:20px 5px 5px 5px;
+				background-color:white;
+				border:0;
+				}
+
+				#contentPanel .description{
+				font-weight:bold;
+				padding-bottom:3px;
+				}
+
+				.scToolbar{
+				background-color:#F0F1F2;
+				overflow:hidden;
+				}
+
+				form {background-color:white;}
+			</Stylesheet>
+
+			<input type="hidden" id="scValidatorsUpdateDelay" name="scValidatorsUpdateDelay" value="750"/>
+			<input type="hidden" id="scHasValidators" name="scHasValidators" value="1"/>
+
+			<GridPanel Cellpadding="0" Width="100%">
+				<!-- Manual toolbar. Use AutoToolbar to generate tool buttons from the Sitecore items -->
+				<Toolbar>
+					<Toolbutton style="float:right;padding-left:5px;" Header="Close" Icon="/sitecore modules/shell/field suite/images/exit.png" Click="local:close" />
+					<Toolbutton style="float:right;padding-left:5px;" ID="saveButton" Header="Save" Icon="/sitecore modules/shell/field suite/images/accept16x16.png" Click="local:save" />
+					<Border align="Left" class="titleBorder">
+						<Literal Text="Velir Add Form" class="titleText"/>
+					</Border>
+				</Toolbar>
+			</GridPanel>
+
+			<!-- Main region, containing Treeview and Listview controls -->
+			<Panel ID="contentPanel">
+				<DataContext ID="addItemDataContext" DataViewName="Master"/>
+				<div class="description">
+					This form allows you to select an item from the tree picker and relate it back to the item on the parent form.
+				</div>
+				<GridPanel Width="100%" Columns="1" GridPanel.Width="100%">
+					<TreePicker ID="addItemTreePicker" DataContext="addItemDataContext" SelectOnly="true" GridPanel.Width="100%" Padding="1"/>
+				</GridPanel>
+			</Panel>
+		</FormPage>
+	</FieldSuiteAddForm>
+</control>
