@@ -4,7 +4,7 @@ using Sitecore.Data;
 using Sitecore.Diagnostics;
 using Sitecore.Data.Items;
 using Sitecore.Resources;
-using Velir.SitecoreLibrary.Extensions;
+using Sitecore.SharedSource.Commons.Extensions;
 using FieldSuite.FieldGutter;
 
 namespace FieldSuite.CustomSitecore.Fields

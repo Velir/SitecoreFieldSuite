@@ -11,13 +11,13 @@ using Sitecore.Data.Validators;
 using Sitecore.Diagnostics;
 using Sitecore.Pipelines.Save;
 using Sitecore.Reflection;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Shell.Applications.ContentManager;
 using Sitecore.Web;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Xml;
-using Velir.SitecoreLibrary.Extensions;
 
 namespace FieldSuite.CustomSitecore.Applications
 {

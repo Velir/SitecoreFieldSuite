@@ -5,10 +5,10 @@ using Sitecore;
 using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Data.Items;
-using Velir.SitecoreLibrary.Extensions;
 using FieldSuite.Controls.ListItem;
 using FieldSuite.FieldGutter;
 using FieldSuite.ImageMapping;
+using Sitecore.SharedSource.Commons.Extensions;
 
 namespace FieldSuite.CustomSitecore.Fields
 {

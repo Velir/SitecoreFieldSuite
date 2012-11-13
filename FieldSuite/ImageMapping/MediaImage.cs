@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Sitecore.Resources.Media;
-
+﻿using Sitecore.Resources.Media;
 using Sitecore.Data.Items;
-using Velir.SitecoreLibrary.Extensions;
+using Sitecore.SharedSource.Commons.Extensions;
 
 namespace FieldSuite.ImageMapping
 {

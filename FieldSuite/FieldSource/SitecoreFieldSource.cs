@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Sitecore.Diagnostics;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Web.UI.HtmlControls.Data;
-
 using Sitecore.Data.Items;
-using Velir.SitecoreLibrary.Extensions;
 
 namespace FieldSuite.FieldSource
 {

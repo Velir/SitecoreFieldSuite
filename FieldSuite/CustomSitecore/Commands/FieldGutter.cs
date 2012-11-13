@@ -1,7 +1,7 @@
 ﻿using System.Web;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
-using Velir.SitecoreLibrary.Extensions;
 using Sitecore.Data.Items;
 using FieldSuite.FieldGutter;
 

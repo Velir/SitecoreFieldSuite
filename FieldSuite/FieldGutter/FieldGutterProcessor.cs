@@ -4,8 +4,6 @@ using System.Reflection;
 using System.Web;
 using System.Xml;
 using Sitecore.Configuration;
-using Sitecore.Data.Items;
-using Velir.SitecoreLibrary.Extensions;
 
 namespace FieldSuite.FieldGutter
 {

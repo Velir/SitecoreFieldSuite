@@ -13,6 +13,7 @@ using Sitecore.Diagnostics;
 using Sitecore.Pipelines.Save;
 using Sitecore.Reflection;
 using Sitecore.SecurityModel;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Shell.Applications.ContentManager;
 using Sitecore.Shell.Framework;
@@ -21,7 +22,6 @@ using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Web.UI.WebControls;
 using Sitecore.Xml;
-using Velir.SitecoreLibrary.Extensions;
 using FieldSuite.ImageMapping;
 
 namespace FieldSuite.CustomSitecore.Applications

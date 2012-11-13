@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using Sitecore;
 using Sitecore.Data;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Data.Items;
-using Velir.SitecoreLibrary.Extensions;
 using FieldSuite.Controls.ListItem;
 using FieldSuite.ImageMapping;
 
@@ -22,7 +22,7 @@ namespace FieldSuite.CustomSitecore.Commands
 		/// <param name="context">The context.</param>
 		public override void Execute(CommandContext context)
 		{
-			if (context.Items.Count() == 0)
+			if (!context.Items.Any())
 			{
 				return;
 			}

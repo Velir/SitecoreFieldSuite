@@ -5,7 +5,7 @@ using System.Text;
 using Sitecore.Resources;
 
 using Sitecore.Data.Items;
-using Velir.SitecoreLibrary.Extensions;
+using Sitecore.SharedSource.Commons.Extensions;
 using FieldSuite.FieldGutter;
 
 namespace FieldSuite.Controls.ListItem

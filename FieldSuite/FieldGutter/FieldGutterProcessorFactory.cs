@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Web;
 using System.Xml;
 using Sitecore.Configuration;
-using Velir.SitecoreLibrary.Extensions;
-using Sitecore.Data.Items;
 
 namespace FieldSuite.FieldGutter
 {

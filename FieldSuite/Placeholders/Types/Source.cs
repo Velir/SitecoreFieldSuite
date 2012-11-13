@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Velir.SitecoreLibrary.Extensions;
-using Sitecore.Data.Items;
-
+﻿
 namespace FieldSuite.Placeholders.Types
 {
 	public class Source : IFieldPlaceholder

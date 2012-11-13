@@ -8,9 +8,9 @@ using Sitecore.Data;
 using Sitecore.Diagnostics;
 using Sitecore.Resources;
 using Sitecore.Data.Items;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
-using Velir.SitecoreLibrary.Extensions;
 using FieldSuite.Controls;
 using FieldSuite.Controls.ListItem;
 using FieldSuite.FieldGutter;
@@ -487,9 +487,9 @@ namespace FieldSuite.CustomSitecore.Fields
 		protected void SetProperties()
 		{
 			string @string = StringUtil.GetString(new string[1]
-      {
-        this.Source
-      });
+			{
+				this.Source
+			});
 			if (Sitecore.Data.ID.IsID(@string))
 				this.DataSource = this.Source;
 			else if (this.Source != null && !@string.Trim().StartsWith("/", StringComparison.OrdinalIgnoreCase))

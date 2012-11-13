@@ -1,8 +1,8 @@
 ﻿using Sitecore.Data.Items;
 using Sitecore.Resources;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
-using Velir.SitecoreLibrary.Extensions;
 
 namespace FieldSuite.CustomSitecore.Commands
 {

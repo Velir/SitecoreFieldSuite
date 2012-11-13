@@ -44,19 +44,17 @@
     <Reference Include="Sitecore.NVelocity">
       <HintPath>..\Lib\Sitecore\v6.4.1\Sitecore.NVelocity.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.SharedSource.Commons">
+      <HintPath>..\Lib\Sitecore.SharedSource\Sitecore.SharedSource.Commons.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Velir.SitecoreLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Velir\Velir.SitecoreLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Velir.SitecoreLibrary.Modules.PublishedItemComparer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Velir\Velir.SitecoreLibrary.Modules.PublishedItemComparer.dll</HintPath>

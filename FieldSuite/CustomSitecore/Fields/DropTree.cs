@@ -3,10 +3,10 @@ using System.Web.UI;
 using Sitecore;
 using Sitecore.Diagnostics;
 using Sitecore.Resources;
+using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
-using Velir.SitecoreLibrary.Extensions;
 using Sitecore.Data.Items;
 using FieldSuite.FieldGutter;
 

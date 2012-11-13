@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
+using Sitecore.SharedSource.Commons.Extensions;
 using log4net;
 using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Diagnostics;
 using Sitecore.Publishing;
 using Sitecore.Publishing.Pipelines.Publish;
-using Velir.SitecoreLibrary.Extensions;
 using Sitecore.Data.Items;
 
 namespace FieldSuite.CustomSitecore.Pipelines
@@ -60,7 +60,7 @@ namespace FieldSuite.CustomSitecore.Pipelines
 					if(valueAttribute == null)
 					{
 						//unable to find attribute
-						Logger.Warn("Velir.SitecoreLibrary - AutoPublishReferenceItems - Not able to read the value attribute of AutoPublishFieldValues.Templates in the config file");
+						Logger.Warn("FieldSuite - AutoPublishReferenceItems - Not able to read the value attribute of AutoPublishFieldValues.Templates in the config file");
 						return null;
 					}
 
@@ -107,7 +107,7 @@ namespace FieldSuite.CustomSitecore.Pipelines
 					if (valueAttribute == null)
 					{
 						//unable to find attribute
-						Logger.Warn("Velir.SitecoreLibrary - AutoPublishReferenceItems - Not able to read the value attribute of AutoPublishFieldValues.Templates in the config file");
+						Logger.Warn("FieldSuite - AutoPublishReferenceItems - Not able to read the value attribute of AutoPublishFieldValues.Templates in the config file");
 						return false;
 					}
 

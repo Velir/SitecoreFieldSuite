@@ -2,13 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Web;
 using System.Xml;
 using Sitecore.Configuration;
-using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
-using Sitecore.Resources.Media;
-using Velir.SitecoreLibrary.Extensions;
+using Sitecore.SharedSource.Commons.Extensions;
 
 namespace FieldSuite.ImageMapping
 {
