@@ -1,0 +1,159 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Sitecore-FieldSuite</PackageName>
+      <Author>Tim Braga</Author>
+      <Version>2.1</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme>Please read and understand the Field Suite's Instructional Guide.  This will help you in understanding the functionality provided as well as how to make customizations to the module.  You can find the guide on the Velir Blog (http://blog.velir.com).
+
+This file will overwrite the Content Manager's default.aspx file during the installation process.  </Readme>
+      <Publisher>Velir</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/system/Field types/Field Suite/{EEEBEB6F-CB60-4B3A-812F-8709FEE98C97}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droplink/{EBB32C7A-5CF1-4977-B084-384B5C5F77F2}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droplink/Menu/{49C037D8-8033-4749-AF6A-D09D63D52D10}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droplink/Menu/Edit Item/{75F2734C-F8DA-4B83-8D42-2A0156E38950}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droplink/Menu/Go to Item/{10FA4B92-A178-4300-8B31-DE68AE5D06F0}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droptree/{1D9B7205-0294-447D-8205-A7D1D8019402}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droptree/Menu/{6D295BFB-811C-4535-9D50-628901550435}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droptree/Menu/Edit Item/{51B93848-BBE0-433E-906E-5575CD3926C0}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Droptree/Menu/Go to Item/{11DB038C-106B-4214-878B-758FF66AA0C1}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/{1BFD07E7-DF30-4C40-A6E9-E8C5409D5768}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/Menu/{541FBE8C-FF0E-4713-BF60-7F0AFB3D9664}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/Menu/Edit Item/{BF0DA0D0-D1D0-4733-A68B-4276B52DDCA3}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/Menu/Go to Item/{9853FB96-F796-4297-AD4E-F4A69CAA3C39}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/Menu/Link Item/{39E135E6-AC17-4060-B35E-9492FC5F41CD}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/Menu/Remove Item/{71C743A5-DB32-49F9-B8BF-60E8C1289FD8}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/Menu/Sort Left/{0C70CCBA-937F-46E9-B0E6-63B38197E3C9}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Images Field/Menu/Sort Right/{7C24BF46-7344-4A2B-A0FF-915378996648}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Multilist/{E2F97774-FAAE-4212-A8F5-919A054C055A}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Multilist/Menu/{CD3EA945-43DF-48B8-9673-5220F439C2A6}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Multilist/Menu/Deselect All/{1C46A16B-43F1-4EE3-A409-4508D7CC0F77}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Multilist/Menu/Edit Item/{A4F947AE-6F52-4A7D-8939-27BEC71C960F}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Multilist/Menu/Go to Item/{2C92B5EE-23F6-4BF6-AD7C-27B25834B06D}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Multilist/Menu/Select All/{D2C4E2AD-CF6E-4186-A712-F4E6638EF1C4}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Treelist/{1A670679-36D2-4805-8392-917B077D20F9}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Treelist/Menu/{EE042AF3-9B39-467B-B393-7EB721C82C7E}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Treelist/Menu/Edit Item/{A96AC93D-7941-4DC6-AFEF-A244222BB54B}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite Treelist/Menu/Go to Item/{188B4419-E89B-44DB-BE4D-ECB7B5C6B234}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite TreelistEx/{49068BF0-DFBE-40A9-8E30-FC3F76C99C50}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite TreelistEx/Menu/{8C0D9E6A-271C-4504-B770-1D155EBC589B}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite TreelistEx/Menu/Edit Item/{2183A1BF-FAA5-4A7C-BEC8-271052745603}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite TreelistEx/Menu/Edit/{D394D83F-1664-4A9F-A9B6-F7E421E2B54A}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite TreelistEx/Menu/Go to Item/{3FF1AA29-F192-4EA6-BBFC-C45EA15A2A2A}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/__Standard Values/{D710365F-27A5-4FA1-8D47-E7FE061F289F}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/{998B965E-6AB8-4568-810F-8101D60D0CC3}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/{4C5A0AED-46C9-43EB-AE72-FDAFA36F5928}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Action/{6516B18C-7103-422D-B4F1-B1E37C3D9A22}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Checkbox/{861F1312-64F9-49E3-8880-8FA1082F98AA}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Client Event/{CA4B5718-73C8-4DCC-A1B4-962C8F2069D6}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/CssClass/{048C02B9-799A-4A67-B44C-3F6F3EFA94A9}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Display name/{9B72A62B-2775-423D-B17A-EC34A9F31AF8}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Filters/{7F4D2FE1-C253-469F-9018-6F63C0F89129}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Hotkey/{3B825E23-4C26-4910-BF7B-1265D57048CB}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Icon/{335C6760-6C0E-4C6C-814C-A53D203F553E}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/ID/{AFC50ABC-3ED5-49F7-AA38-32DE0034E17C}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Inner Html/{FA2E4767-2DE9-41AD-8820-4E4C1F68A15D}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Message/{CAB694FC-E37C-44EB-9012-488B775CF638}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Radiogroup/{DAEC87AC-3A74-4946-8A60-9B419388FB94}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Show In Field Editor/{953B8F86-0E4E-47EA-8CBB-2772499C6790}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Core</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/FieldSuite.config</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/accept16x16.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/add.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/add32x32.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/arrow_blue_left.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/arrow_blue_right.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/bullet_ball_green.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/bullet_ball_red.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/component.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/cut.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/delete.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/document_error.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/exit.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/forbidden.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/gear.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/gear_connection.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/treebackground.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/unknown.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/v-only.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/v-withcircle.png</x-item>
+        <x-item>/sitecore/shell/Applications/Content Manager/Default.aspx</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.Droplink.js</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.DropTree.js</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.Images.js</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.js</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.Treelist.js</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Html.js</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.css</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.Droplink.css</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.Images.css</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.Treelist.css</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Add Form.xml</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Edit Form.xml</x-item>
+        <x-item>/sitecore/shell/Applications/Content Manager/FieldEditor.aspx</x-item>
+        <x-item>/bin/Sitecore.SharedSource.Commons.dll</x-item>
+        <x-item>/bin/Sitecore.SharedSource.PublishedItemComparer.dll</x-item>
+        <x-item>/bin/Sitecore.SharedSource.FieldSuite.dll</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
