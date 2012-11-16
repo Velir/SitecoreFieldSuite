@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sitecore.SharedSource.PublishedItemComparer.CustomItems.Common.ItemComparer;
 using Sitecore.SharedSource.PublishedItemComparer.Domain;
+using Sitecore.SharedSource.PublishedItemComparer.Utils;
+using Sitecore.SharedSource.PublishedItemComparer.Validations;
 using log4net;
 using Sitecore.Data;
-using Velir.SitecoreLibrary.Modules.PublishedItemComparer.CustomItems.Common.ItemComparer;
-using Velir.SitecoreLibrary.Modules.PublishedItemComparer.Util;
-using Velir.SitecoreLibrary.Modules.PublishedItemComparer.Validations;
 
 namespace Sitecore.SharedSource.FieldSuite.FieldGutter
 {

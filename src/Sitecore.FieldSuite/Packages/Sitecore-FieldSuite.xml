@@ -125,7 +125,6 @@ This file will overwrite the Content Manager's default.aspx file during the inst
         <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Edit Form.xml</x-item>
         <x-item>/sitecore/shell/Applications/Content Manager/FieldEditor.aspx</x-item>
         <x-item>/bin/Sitecore.SharedSource.Commons.dll</x-item>
-        <x-item>/bin/Sitecore.SharedSource.PublishedItemComparer.dll</x-item>
         <x-item>/bin/Sitecore.SharedSource.FieldSuite.dll</x-item>
       </Entries>
       <Converter>
