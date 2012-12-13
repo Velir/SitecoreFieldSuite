@@ -90,13 +90,8 @@ FieldSuite.Fields.Treelist.AddItem = function (fieldId, event) {
 		includedTemplates = includedElement.value;
 	}
 
-	var database = '';
-	var databaseElement = $(fieldId + '_all_Database');
-	if (databaseElement != null && includedElement.value != null) {
-		database = databaseElement.value;
-	}
 	//launch serverside command
-	scForm.invoke('fieldsuite:treelist.additem(fieldid=' + fieldId + ', itemid=' + itemId + ', excludedTemplates=' + excludedTemplates + ', includedTemplates=' + includedTemplates + ', database=' + database + ')');
+	scForm.invoke('fieldsuite:treelist.additem(fieldid=' + fieldId + ', itemid=' + itemId + ', excludedTemplates=' + excludedTemplates + ', includedTemplates=' + includedTemplates + ')');
 	return false;
 }
 
