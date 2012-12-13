@@ -141,7 +141,7 @@ namespace FieldSuite
 					return new List<string>();
 				}
 
-                const string message = "FieldSuite.AvailableItems - ItemId: {0}, TemplateId: {1}, Source: {2}";
+                const string message = "FieldSuite.SelectedItems - ItemId: {0}, TemplateId: {1}, Source: {2}";
                 string[] parameters = new[] { CurrentItem.ID.ToString(), CurrentItem.TemplateID.ToString(), Source };
                 using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, parameters))
 				{
