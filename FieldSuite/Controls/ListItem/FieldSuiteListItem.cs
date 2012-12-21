@@ -172,7 +172,7 @@ namespace FieldSuite.Controls.ListItem
 				itemId,
 				fieldGutterHtml,
 				fieldId,
-				AddRemoveHtml(string.Format("FieldSuite.Fields.RemoveItem('{0}', '{1});", fieldId, itemId), Images.GetSpacer(16, 16)),
+				AddRemoveHtml(string.Format("FieldSuite.Fields.RemoveItem('{0}', '{1}');", fieldId, itemId), Images.GetSpacer(16, 16)),
 				displayText,
 				Images.GetImage("/sitecore modules/shell/field suite/images/bullet_ball_red.png", 0x10, 0x10, "absmiddle", "0px 4px 0px 0px", displayText),
 				displayText,
@@ -188,7 +188,13 @@ namespace FieldSuite.Controls.ListItem
 				return string.Empty;
 			}
 
-			return string.Format("<div class=\"addRemoveButton\"><a onclick=\"{0}return false;\" href=\"#\">{1}</a></div>", clickEvent, innerAnchorHtml);
+            StringBuilder stringBuilder = new StringBuilder();
+		    stringBuilder.Append("<div class=\"addRemoveButton\"><a onclick=\"");
+		    stringBuilder.Append(clickEvent);
+		    stringBuilder.Append("return false;\" href=\"#\">");
+		    stringBuilder.Append(innerAnchorHtml);
+		    stringBuilder.Append("</a></div>");
+		    return stringBuilder.ToString();
 		}
 
 		/// <summary>

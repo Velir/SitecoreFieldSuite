@@ -69,19 +69,34 @@ FieldSuite.Fields.EditItem = function (fieldId) {
 // It will remove the selected item from the list.
 // </summary>
 // <param name="fieldId">ID of the Field</param>
-FieldSuite.Fields.RemoveItem = function (fieldId) {
-	var highlightedItems = FieldSuite.Fields.HighlightedSelectedItems(fieldId);
-	if (highlightedItems == null || highlightedItems.length == 0) {
-		alert('Please select an item');
-		return;
-	}
+FieldSuite.Fields.RemoveItem = function (fieldId, itemId) {
+    var highlightedItems = FieldSuite.Fields.HighlightedSelectedItems(fieldId);
+    if (highlightedItems == null || highlightedItems.length == 0) {
 
-	//remove html
-	selectedValues[0].remove();
+        if (itemId) {
+            var wasFound = false;
+            $$('#' + fieldId + '_SelectedItems div.velirItem').each(function (item) {
+                var id = $(item).readAttribute('data_id');
+                if (id === itemId) {
+                    wasFound = true;
+                    item.remove();
+                    throw $break;
+                }
+            });
+        }
 
-	//reconcile list
-	FieldSuite.Fields.ReconcileFieldValue(fieldId);
-	return false;
+        if (!wasFound) {
+            alert('Please select an item');
+            return;
+        }
+    } else {
+        //remove html
+        selectedValues[0].remove();
+    }
+
+    //reconcile list
+    FieldSuite.Fields.ReconcileFieldValue(fieldId);
+    return false;
 }
 
 // <summary>
