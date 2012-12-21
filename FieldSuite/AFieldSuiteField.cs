@@ -93,8 +93,9 @@ namespace FieldSuite
 					return _availableItems;
 				}
 
-				string message = string.Format("FieldSuite.AvailableItems - ItemId: {0}, TemplateId: {1}, Source: {2}", CurrentItem.ID, CurrentItem.TemplateID, Source);
-				using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, new string[0]))
+			    const string message = "FieldSuite.AvailableItems - ItemId: {0}, TemplateId: {1}, Source: {2}";
+                string[] parameters = new [] { CurrentItem.ID.ToString(), CurrentItem.TemplateID.ToString(), Source };
+                using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, parameters))
 				{
 					//if nothing is returned and the source is empty, default back to home nodes children.
 					if ((items == null || items.Length == 0) && string.IsNullOrEmpty(this.Source))
@@ -140,8 +141,9 @@ namespace FieldSuite
 					return new List<string>();
 				}
 
-				string message = string.Format("FieldSuite.SelectedItems - ItemId: {0}, TemplateId: {1}, Source: {2}", CurrentItem.ID, CurrentItem.TemplateID, Source);
-				using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, new string[0]))
+                const string message = "FieldSuite.SelectedItems - ItemId: {0}, TemplateId: {1}, Source: {2}";
+                string[] parameters = new[] { CurrentItem.ID.ToString(), CurrentItem.TemplateID.ToString(), Source };
+                using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, parameters))
 				{
 					IDictionary dictionary;
 					ArrayList list;
