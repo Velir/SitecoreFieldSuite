@@ -21,13 +21,20 @@ if (FieldSuite.Html == null) {
 	FieldSuite.Html = [];
 }
 
-FieldSuite.Fields.Treelist.SelectedItem = function (fieldId) {
-	var selectedItems = $$('#' + fieldId + ' .scContentTreeNodeActive');
-	if (selectedItems == null || selectedItems.length == 0) {
-		return null;
-	}
+FieldSuite.Fields.Treelist.SelectedItem = function (fieldId, event) {
+    if (event) {
+        var selectedItem = Event.element(event);
+        if (selectedItem) {
+            return selectedItem;
+        }
+    }
 
-	return selectedItems[0];
+    var selectedItems = $('#' + fieldId + ' .scContentTreeNodeActive');
+    if (selectedItems == null || selectedItems.length == 0) {
+        return null;
+    }
+
+    return selectedItems[0];
 }
 
 FieldSuite.Fields.Treelist.AddItemToContent = function (fieldId, html) {
@@ -46,10 +53,10 @@ FieldSuite.Fields.Treelist.AddItemToContent = function (fieldId, html) {
 	return false;
 }
 
-FieldSuite.Fields.Treelist.AddItem = function (fieldId) {
-
+FieldSuite.Fields.Treelist.AddItem = function (fieldId, event) {
+	
 	//get selected item
-	var selectedItem = FieldSuite.Fields.Treelist.SelectedItem(fieldId);
+	var selectedItem = FieldSuite.Fields.Treelist.SelectedItem(fieldId, event);
 	if (selectedItem == null) {
 		alert('Please select an item');
 		return;
