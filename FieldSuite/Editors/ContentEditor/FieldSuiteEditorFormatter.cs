@@ -26,6 +26,8 @@ using FieldSuite.Placeholders;
 using Control = System.Web.UI.Control;
 using Memo = Sitecore.Web.UI.HtmlControls.Memo;
 using WebControl = System.Web.UI.WebControls.WebControl;
+using FieldSuite.FieldSource;
+using Sitecore.Web.UI.HtmlControls.Data;
 
 namespace FieldSuite.Editors.ContentEditor
 {
@@ -714,14 +716,51 @@ namespace FieldSuite.Editors.ContentEditor
 			return null;
 		}
 
+		/// <summary>
+		/// This method will return the field source but will also check if the source is parameterized and if the datasource has a query. if so it will convert the query into an item path.
+		/// </summary>
+		/// <param name="field"></param>
+		/// <returns></returns>
 		private static string GetFieldSource(Sitecore.Shell.Applications.ContentManager.Editor.Field field)
 		{
 			if (field == null || field.ItemField == null || field.ItemField.Item == null || string.IsNullOrEmpty(field.ItemField.Source))
 			{
 				return string.Empty;
 			}
+			
+			string rawSource = field.ItemField.Source;
+			return (!string.IsNullOrEmpty(rawSource) && rawSource.IndexOf("datasource=query:", StringComparison.OrdinalIgnoreCase) >= 0)
+				? ReplaceQueriesInDataSource(rawSource, field.ItemField.Item)
+				: rawSource;
+		}
 
-			return field.ItemField.Source;
+		/// <summary>
+		/// This method is used to change the query value in the datasource value into an item path
+		/// </summary>
+		/// <param name="source"></param>
+		/// <returns></returns>
+		private static string ReplaceQueriesInDataSource(string source, Item contextItem) {
+
+			string ds = StringUtil.ExtractParameter("DataSource", source).Trim();
+			Item itemQueried = GetQueriedItem(contextItem, ds);
+			return (itemQueried != null)
+				? source.Replace(ds, itemQueried.Paths.FullPath)
+				: source.Replace(ds, string.Empty);
+		}
+
+		/// <summary>
+		/// This runs the query on the axes for the item passed in making it relative to that item
+		/// </summary>
+		/// <param name="currentItem"></param>
+		/// <param name="query"></param>
+		/// <returns></returns>
+		private static Item GetQueriedItem(Item currentItem, string query) {
+			if (currentItem == null || string.IsNullOrEmpty(query))
+				return null;
+
+			Item[] returnItems = LookupSources.GetItems(currentItem, query);
+
+			return (returnItems != null && returnItems.Any()) ? returnItems.First() : null;
 		}
 
 		public static void SetStyle(Control editor, Sitecore.Shell.Applications.ContentManager.Editor.Field field)

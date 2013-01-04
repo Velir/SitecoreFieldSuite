@@ -27,11 +27,6 @@ namespace FieldSuite
 		List<string> SelectedItems { get; }
 
 		/// <summary>
-		/// Returns the Field's Source
-		/// </summary>
-		IFieldSource FieldSource { get; }
-
-		/// <summary>
 		/// Method to Build the Html for the Available Items
 		/// </summary>
 		/// <returns></returns>

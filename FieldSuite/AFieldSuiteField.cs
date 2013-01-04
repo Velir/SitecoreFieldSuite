@@ -27,8 +27,7 @@ namespace FieldSuite
 		private List<string> _selectedItems;
 		private bool _showSortIcons;
 		private string _fieldGutter;
-		private IFieldSource _fieldSource;
-
+		
 		public string FieldTypeItemId { get; set; }
 
 		/// <summary>
@@ -93,9 +92,8 @@ namespace FieldSuite
 					return _availableItems;
 				}
 
-			    const string message = "FieldSuite.AvailableItems - ItemId: {0}, TemplateId: {1}, Source: {2}";
-                string[] parameters = new [] { CurrentItem.ID.ToString(), CurrentItem.TemplateID.ToString(), Source };
-                using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, parameters))
+				string message = string.Format("FieldSuite.AvailableItems - ItemId: {0}, TemplateId: {1}, Source: {2}", CurrentItem.ID, CurrentItem.TemplateID, Source);
+				using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, new string[0]))
 				{
 					//if nothing is returned and the source is empty, default back to home nodes children.
 					if ((items == null || items.Length == 0) && string.IsNullOrEmpty(this.Source))
@@ -141,9 +139,8 @@ namespace FieldSuite
 					return new List<string>();
 				}
 
-                const string message = "FieldSuite.SelectedItems - ItemId: {0}, TemplateId: {1}, Source: {2}";
-                string[] parameters = new[] { CurrentItem.ID.ToString(), CurrentItem.TemplateID.ToString(), Source };
-                using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, parameters))
+				string message = string.Format("FieldSuite.SelectedItems - ItemId: {0}, TemplateId: {1}, Source: {2}", CurrentItem.ID, CurrentItem.TemplateID, Source);
+				using (new LongRunningOperationWatcher(Settings.Profiling.RenderFieldThreshold, message, new string[0]))
 				{
 					IDictionary dictionary;
 					ArrayList list;
@@ -172,34 +169,6 @@ namespace FieldSuite
 			set
 			{
 				_selectedItems = value;
-			}
-		}
-
-		/// <summary>
-		/// Returns the Field's Source
-		/// </summary>
-		public IFieldSource FieldSource
-		{
-			get
-			{
-				if (_fieldSource != null)
-				{
-					return _fieldSource;
-				}
-
-				if (CurrentItem.IsNull())
-				{
-					return null;
-				}
-
-				IFieldSource fieldSource = FieldSourceFactory.GetFieldSource(this.Source);
-				if (fieldSource == null)
-				{
-					return null;
-				}
-
-				_fieldSource = fieldSource;
-				return _fieldSource;
 			}
 		}
 
