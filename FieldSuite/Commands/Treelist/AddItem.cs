@@ -22,7 +22,7 @@ namespace FieldSuite.Commands.Treelist
 		/// <param name="context">The context.</param>
 		public override void Execute(CommandContext context)
 		{
-			if (context.Items.Count() == 0)
+			if (!context.Items.Any())
 			{
 				return;
 			}
