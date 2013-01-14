@@ -15,6 +15,7 @@ using FieldSuite.FieldGutter;
 using FieldSuite.Util;
 using Sitecore;
 using Sitecore.Data;
+using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Text;
@@ -39,6 +40,15 @@ namespace FieldSuite.Types
 		{
 			get { return _renderSelectedItemCount; }
 			set { _renderSelectedItemCount = value; }
+		}
+
+		public GeneralLinks()
+		{
+		}
+
+		public GeneralLinks(Item item, TextField field)
+		{
+			this.Value = item.Fields[field.InnerField.Name].ToString();
 		}
 
 		public override void HandleMessage(Message message)
@@ -88,7 +98,7 @@ namespace FieldSuite.Types
 			}
 		}
 
-		protected virtual List<GeneralLinkItem> LinkItems
+		public virtual List<GeneralLinkItem> LinkItems
 		{
 			get
 			{
