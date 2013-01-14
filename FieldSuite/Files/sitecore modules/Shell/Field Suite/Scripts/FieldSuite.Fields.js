@@ -69,34 +69,19 @@ FieldSuite.Fields.EditItem = function (fieldId) {
 // It will remove the selected item from the list.
 // </summary>
 // <param name="fieldId">ID of the Field</param>
-FieldSuite.Fields.RemoveItem = function (fieldId, itemId) {
-    var highlightedItems = FieldSuite.Fields.HighlightedSelectedItems(fieldId);
-    if (highlightedItems == null || highlightedItems.length == 0) {
+FieldSuite.Fields.RemoveItem = function (fieldId) {
+	var highlightedItems = FieldSuite.Fields.HighlightedSelectedItems(fieldId);
+	if (highlightedItems == null || highlightedItems.length == 0) {
+		alert('Please select an item');
+		return;
+	}
 
-        if (itemId) {
-            var wasFound = false;
-            $$('#' + fieldId + '_SelectedItems div.velirItem').each(function (item) {
-                var id = $(item).readAttribute('data_id');
-                if (id === itemId) {
-                    wasFound = true;
-                    item.remove();
-                    throw $break;
-                }
-            });
-        }
+	//remove html
+	selectedValues[0].remove();
 
-        if (!wasFound) {
-            alert('Please select an item');
-            return;
-        }
-    } else {
-        //remove html
-        selectedValues[0].remove();
-    }
-
-    //reconcile list
-    FieldSuite.Fields.ReconcileFieldValue(fieldId);
-    return false;
+	//reconcile list
+	FieldSuite.Fields.ReconcileFieldValue(fieldId);
+	return false;
 }
 
 // <summary>
@@ -432,6 +417,20 @@ FieldSuite.Fields.ReconcileFieldValue = function (fieldId) {
 	});
 
 	FieldSuite.Fields.UpdateFieldValue(fieldId, fieldValue);
+}
+
+// <summary>
+// Return the hidden value of the field
+// </summary>
+// <param name="fieldId">ID of the Field</param>
+FieldSuite.Fields.GetFieldValue = function (fieldId) {
+	var fieldValueElement = scForm.browser.getControl(fieldId + '_Value');
+	if (fieldValueElement == null) {
+		console.log('Field Value element is null: ' + fieldId + '_Value');
+		return;
+	}
+
+	return fieldValueElement.value;
 }
 
 // <summary>

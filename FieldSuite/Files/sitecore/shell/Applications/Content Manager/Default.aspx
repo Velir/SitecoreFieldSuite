@@ -14,7 +14,8 @@
 	<sc:Stylesheet runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.images.css"/>
 	<sc:Stylesheet runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.droplink.css"/>
 	<sc:Stylesheet runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.treelist.css"/>
-
+	<sc:Stylesheet runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.generallinks.css"/>
+	
 	<asp:placeholder id="Stylesheets" runat="server" />
 
 	<script type="text/JavaScript" language="javascript" src="/sitecore/shell/controls/SitecoreObjects.js"></script>
@@ -41,7 +42,8 @@
 	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.droplink.js"></script>
 	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.droptree.js"></script>
 	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.treelist.js"></script>
-
+	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.generallinks.js"></script>
+	
 	<style type="text/css">
 		.scRibbonNavigator {
 		margin-left:44px 

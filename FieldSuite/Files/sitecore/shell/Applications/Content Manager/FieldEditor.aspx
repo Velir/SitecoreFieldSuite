@@ -14,6 +14,7 @@
 	<sc:Stylesheet ID="Stylesheet2" runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.images.css"/>
 	<sc:Stylesheet ID="Stylesheet3" runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.droplink.css"/>
 	<sc:Stylesheet ID="Stylesheet4" runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.treelist.css"/>
+	<sc:Stylesheet runat="server" Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.generallinks.css"/>
 
 	<script type="text/JavaScript" language="javascript" src="/sitecore/shell/controls/SitecoreObjects.js"></script>
 	<script type="text/JavaScript" language="javascript" src="/sitecore/shell/controls/SitecoreKeyboard.js"></script>
@@ -30,6 +31,7 @@
 	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.droplink.js"></script>
 	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.droptree.js"></script>
 	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.treelist.js"></script>
+	<script type="text/JavaScript" language="javascript" src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.generallinks.js"></script>
   
   <script type="text/javascript">
     function OnResize() {

@@ -73,6 +73,19 @@ This file will overwrite the Content Manager's default.aspx file during the inst
         <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Message/{CAB694FC-E37C-44EB-9012-488B775CF638}/invariant/0</x-item>
         <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Radiogroup/{DAEC87AC-3A74-4946-8A60-9B419388FB94}/invariant/0</x-item>
         <x-item>/core/sitecore/templates/System/Menus/Menu item/Data/Show In Field Editor/{953B8F86-0E4E-47EA-8CBB-2772499C6790}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/{EB264E64-FFED-4E92-970A-1536363951BE}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/{ADF6E3FA-DCD2-42AA-AFBC-7A0C2614932E}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Anchor/{E99C45FE-527E-4B17-900E-44658BBC5937}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Edit Item/{DC50D4A1-242A-49F7-BEB4-B1DAC4BDEF1B}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/External link/{54D782A1-5695-48DF-BFA8-85802AA8A205}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Go to Item/{C21852F4-890D-4119-BB74-671C65F3BDC3}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Internal link/{1CE76834-D1EE-4928-BBBF-8917B158A267}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Javascript/{3DC685EC-9865-441F-BEE5-F5908A4B8CE1}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Mail to/{45D12D94-5293-40CE-8C82-00B3AD99FD56}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Media/{84C577BE-2F65-4BC3-AC48-EBEFA6BE035D}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Set Link Text/{7771232C-27DE-408F-AE2A-D1B548B78D42}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Sort Down/{61C7025D-3EAE-48E2-847E-D64CAF31859A}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/Field Suite/Field Suite General Links/Menu/Sort Up/{0CCB4050-AF25-4EB7-B8D3-7583FAA0A87D}/invariant/0</x-item>
       </Entries>
       <SkipVersions>False</SkipVersions>
       <Converter>
@@ -135,6 +148,14 @@ This file will overwrite the Content Manager's default.aspx file during the inst
         <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Add Form.xml</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/FieldSuite Edit Form.xml</x-item>
         <x-item>/sitecore/shell/Applications/Content Manager/FieldEditor.aspx</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/application.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/arrow_down_blue.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/arrow_up_blue.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/code_javascript.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/externalLink.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Images/mail.png</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.GeneralLinks.js</x-item>
+        <x-item>/sitecore modules/Shell/Field Suite/Styles/FieldSuite.Fields.GeneralLinks.css</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>

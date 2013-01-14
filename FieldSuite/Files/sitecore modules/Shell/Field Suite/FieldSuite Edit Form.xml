@@ -10,6 +10,7 @@
 			<Stylesheet Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.images.css"/>
 			<Stylesheet Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.droplink.css"/>
 			<Stylesheet Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.treelist.css"/>
+			<Stylesheet Src="/sitecore modules/shell/field suite/styles/fieldsuite.fields.generallinks.css"/>
 
 			<Script Src="/sitecore/shell/Applications/Content Manager/Content Editor.js" Type="text/javascript" />
 			<Script Src="/sitecore/shell/Controls/TreeviewEx/TreeviewEx.js" Type="text/javascript"/>
@@ -19,8 +20,9 @@
 			<Script Type="text/JavaScript" Src="/sitecore/shell/controls/SitecoreModifiedHandling.js"/>
 			<Script Type="text/JavaScript" Src="/sitecore/shell/controls/SitecoreVSplitter.js"/>
 			<Script Type="text/JavaScript" Src="/sitecore/shell/controls/SitecoreWindow.js"/>
-			<Script Type="text/JavaScript" Src="/sitecore/shell/Applications/Content Manager/Content Editor.js"/>
-			<Script Type="text/JavaScript" Src="/sitecore/shell/controls/TreeviewEx/TreeviewEx.js"/>
+			
+			<!-- Removed due to a freezing issue when having firebug open in the Firefox browser -->
+			<!--<Script Type="text/JavaScript" Src="/sitecore/shell/Applications/Content Manager/Content Editor.js"/>-->
 
 			<Script Type="text/JavaScript" Src="/sitecore/shell/Controls/Lib/Scriptaculous/Scriptaculous.js"/>
 			<Script Type="text/JavaScript" Src="/sitecore/shell/Controls/Lib/Scriptaculous/Effects.js"/>
@@ -33,6 +35,7 @@
 			<Script Type="text/JavaScript" Src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.droplink.js"/>
 			<Script Type="text/JavaScript" Src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.droptree.js"/>
 			<Script Type="text/JavaScript" Src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.treelist.js"/>
+			<Script Type="text/JavaScript" Src="/sitecore modules/shell/field suite/scripts/fieldsuite.fields.generallinks.js"/>
 
 			<Stylesheet>
 				form { background: none repeat scroll 0 0 #F0F1F2;}

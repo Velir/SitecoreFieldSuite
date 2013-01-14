@@ -633,7 +633,7 @@ namespace FieldSuite.Editors.ContentEditor
 			}
 		}
 
-		public static void SetProperties(Control editor, Sitecore.Shell.Applications.ContentManager.Editor.Field field, bool readOnly)
+		public void SetProperties(Control editor, Sitecore.Shell.Applications.ContentManager.Editor.Field field, bool readOnly)
 		{
 			Assert.ArgumentNotNull(editor, "editor");
 			Assert.ArgumentNotNull(field, "field");
@@ -671,7 +671,7 @@ namespace FieldSuite.Editors.ContentEditor
 		/// </summary>
 		/// <param name="name"></param>
 		/// <returns></returns>
-		private static Item GetFieldType(string name)
+		protected static Item GetFieldType(string name)
 		{
 			Database coreDatabase = Database.GetDatabase("core");
 			if (coreDatabase == null)
@@ -714,7 +714,7 @@ namespace FieldSuite.Editors.ContentEditor
 			return null;
 		}
 
-		private static string GetFieldSource(Sitecore.Shell.Applications.ContentManager.Editor.Field field)
+		protected virtual string GetFieldSource(Sitecore.Shell.Applications.ContentManager.Editor.Field field)
 		{
 			if (field == null || field.ItemField == null || field.ItemField.Item == null || string.IsNullOrEmpty(field.ItemField.Source))
 			{

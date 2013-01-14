@@ -449,7 +449,7 @@ namespace FieldSuite.Controls
 			output.Write(string.Format("<div id=\"{0}\"", this.ID));
 
 			//double click custom event
-			output.Write(string.Format(" onclick=\"javascript:return Sitecore.Treeview.onTreeClick(this,event);\" ondblclick=\"FieldSuite.Fields.Treelist.AddItem('{0}',event);", this.ParentId));
+			output.Write(string.Format(" onclick=\"javascript:return Sitecore.Treeview.onTreeClick(this,event);\" ondblclick=\"FieldSuite.Fields.Treelist.AddItem('{0}');", this.ParentId));
 			output.Write("\"");
 
 			if (!string.IsNullOrEmpty(this.ContextMenu))
