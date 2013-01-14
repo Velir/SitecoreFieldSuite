@@ -86,11 +86,11 @@
     <Compile Include="FieldGutter\IFieldGutter.cs" />
     <Compile Include="FieldGutter\IFieldGutterProcessor.cs" />
     <Compile Include="FieldGutter\ItemComparerFieldGutter.cs" />
-    <Compile Include="FieldSource\AFieldSource.cs" />
-    <Compile Include="FieldSource\FieldSourceArgs.cs" />
-    <Compile Include="FieldSource\FieldSourceFactory.cs" />
-    <Compile Include="FieldSource\IFieldSource.cs" />
-    <Compile Include="FieldSource\SitecoreFieldSource.cs" />
+    <Compile Include="FieldSource\AbstractFieldSource.cs" />
+    <Compile Include="FieldSource\ParameterizedFieldSource.cs" />
+    <Compile Include="FieldSource\ParameterizedFieldSourceFactory.cs" />
+    <Compile Include="FieldSource\QueryFieldSource.cs" />
+    <Compile Include="FieldSource\QueryFieldSourceFactory.cs" />
     <Compile Include="IFieldSuiteField.cs" />
     <Compile Include="ImageMapping\AFieldSuiteImage.cs" />
     <Compile Include="ImageMapping\FieldSuiteImage.cs" />

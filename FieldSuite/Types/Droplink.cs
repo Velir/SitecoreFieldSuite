@@ -6,6 +6,7 @@ using Sitecore.Data.Items;
 using Sitecore.Resources;
 using Velir.SitecoreLibrary.Extensions;
 using FieldSuite.FieldGutter;
+using System.Text;
 
 namespace FieldSuite.Types
 {
@@ -108,11 +109,12 @@ namespace FieldSuite.Types
 			string fieldGutterHtml = GetFieldGutterHtml();
 			string templateIconHtml = GetTemplateIconHtml();
 
+			StringBuilder html = new StringBuilder();
 			//create dropdown
-			string html = string.Format("<div class=\"droplinkWrapper\">{3}{4}<div class=\"droplinkSelectDiv\"><select id=\"{0}\" onchange=\"javascript:FieldSuite.Fields.Droplink.Select('{0}');return false\" {1} {2}>", this.ID, string.Empty, disabled, fieldGutterHtml, templateIconHtml);
+			html.Append(string.Format("<div class=\"droplinkWrapper\">{3}{4}<div class=\"droplinkSelectDiv\"><select id=\"{0}\" onchange=\"javascript:FieldSuite.Fields.Droplink.Select('{0}');return false\" {1} {2}>", this.ID, string.Empty, disabled, fieldGutterHtml, templateIconHtml));
 			
 			//add empty value
-			html += "<option data_templateIcon=\"\" value=\"\"></option>";
+			html.Append("<option data_templateIcon=\"\" value=\"\"></option>");
 
 			//add items to dropdown
 			foreach (Item sourceItem in items)
@@ -122,11 +124,11 @@ namespace FieldSuite.Types
 					continue;
 				}
 
-				html += RenderItem(sourceItem);
+				html.Append(RenderItem(sourceItem));
 			}
 
-			html +="</select></div></div>";
-			return html;
+			html.Append("</select></div></div>");
+			return html.ToString();
 		}
 
 		/// <summary>

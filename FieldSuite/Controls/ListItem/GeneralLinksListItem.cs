@@ -80,6 +80,12 @@ namespace FieldSuite.Controls.ListItem
 				icon = GeneralLinkItem.AnchorLinkIcon;
 			}
 
+			string sitecoreId = string.Empty;
+			if(linkItem.LinkType == GeneralLinkItem.InternalLinkType || linkItem.LinkType == GeneralLinkItem.MediaLinkType)
+			{
+				sitecoreId = linkItem.Id;
+			}
+
 			string fieldGutterHtml = string.Format("<div class=\"fieldGutter\">{0}</div>", Images.GetSpacer(16, 16));
 			if (useFieldGutter)
 			{
@@ -107,7 +113,8 @@ namespace FieldSuite.Controls.ListItem
 				Text,
 				HoverText,
 				ItemClick,
-				SelectedClass);
+				SelectedClass,
+				sitecoreId);
 		}
 
 		private string AddRemoveHtml(string clickEvent, string innerAnchorHtml)
@@ -127,7 +134,7 @@ namespace FieldSuite.Controls.ListItem
 		{
 			get
 			{
-				return "<div data_id=\"{0}\" class=\"velirItem\">" +
+				return "<div data_id=\"{0}\" data_sitecoreId=\"{10}\" class=\"velirItem\">" +
 							"{1}" +
 							"<div class=\"{9}\">" +
 								"<a data_fieldid=\"{2}\" title=\"{7}\" href=\"#\" onclick=\"{8}return false;\">" +

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Web.UI;
 using Sitecore;
@@ -21,6 +22,7 @@ using FieldSuite.Controls;
 using FieldSuite.Controls.ListItem;
 using FieldSuite.FieldGutter;
 using DateTime = System.DateTime;
+using FieldSuite.FieldSource;
 
 namespace FieldSuite.Types
 {
@@ -106,38 +108,9 @@ namespace FieldSuite.Types
 				}
 				context.Root = this.DataSource;
 				ex.ShowRoot = true;
-
-				if (!string.IsNullOrEmpty(ExcludeTemplatesForSelection))
-				{
-					List<string> templates = new List<string>();
-					foreach (string templateName in ExcludeTemplatesForSelection.Split(','))
-					{
-						if (string.IsNullOrEmpty(templateName))
-						{
-							continue;
-						}
-
-						templates.Add(templateName);
-					}
-
-					ex.ExcludeTemplatesForSelection = templates;
-				}
-
-				if (!string.IsNullOrEmpty(IncludeTemplatesForSelection))
-				{
-					List<string> templates = new List<string>();
-					foreach (string templateName in IncludeTemplatesForSelection.Split(','))
-					{
-						if (string.IsNullOrEmpty(templateName))
-						{
-							continue;
-						}
-
-						templates.Add(templateName);
-					}
-
-					ex.IncludeTemplatesForSelection = templates;
-				}
+				ParameterizedFieldSource pfs = ParameterizedFieldSourceFactory.GetFieldSource(this.Source);
+				ex.ExcludeTemplatesForSelection = pfs.ExcludeTemplatesForSelection.ToList();
+				ex.IncludeTemplatesForSelection = pfs.IncludeTemplatesForSelection.ToList();
 			}
 
 			base.OnLoad(args);
@@ -501,15 +474,16 @@ namespace FieldSuite.Types
 				this.DataSource = this.Source;
 			else if (this.Source != null && !@string.Trim().StartsWith("/", StringComparison.OrdinalIgnoreCase))
 			{
-				this.ExcludeTemplatesForSelection = StringUtil.ExtractParameter("ExcludeTemplatesForSelection", this.Source).Trim();
-				this.IncludeTemplatesForSelection = StringUtil.ExtractParameter("IncludeTemplatesForSelection", this.Source).Trim();
-				this.IncludeTemplatesForDisplay = StringUtil.ExtractParameter("IncludeTemplatesForDisplay", this.Source).Trim();
-				this.ExcludeTemplatesForDisplay = StringUtil.ExtractParameter("ExcludeTemplatesForDisplay", this.Source).Trim();
-				this.ExcludeItemsForDisplay = StringUtil.ExtractParameter("ExcludeItemsForDisplay", this.Source).Trim();
-				this.IncludeItemsForDisplay = StringUtil.ExtractParameter("IncludeItemsForDisplay", this.Source).Trim();
-				this.AllowMultipleSelection = string.Compare(StringUtil.ExtractParameter("AllowMultipleSelection", this.Source).Trim().ToLower(), "yes", StringComparison.OrdinalIgnoreCase) == 0;
-				this.DataSource = StringUtil.ExtractParameter("DataSource", this.Source).Trim().ToLower();
-				this.DatabaseName = StringUtil.ExtractParameter("databasename", this.Source).Trim().ToLower();
+				ParameterizedFieldSource pfs = ParameterizedFieldSourceFactory.GetFieldSource(this.Source);
+				this.ExcludeTemplatesForSelection = pfs.ExcludeTemplatesForSelectionSource;
+				this.IncludeTemplatesForSelection = pfs.IncludeTemplatesForSelectionSource;
+				this.IncludeTemplatesForDisplay = pfs.IncludeTemplatesForDisplaySource;
+				this.ExcludeTemplatesForDisplay = pfs.ExcludeTemplatesForDisplaySource;
+				this.ExcludeItemsForDisplay = pfs.ExcludeItemsForDisplaySource;
+				this.IncludeItemsForDisplay = pfs.IncludeItemsForDisplaySource;
+				this.AllowMultipleSelection = pfs.AllowMultipleSelection;
+				this.DataSource = pfs.DataSource;
+				this.DatabaseName = pfs.DatabaseName;
 			}
 			else
 				this.DataSource = this.Source;

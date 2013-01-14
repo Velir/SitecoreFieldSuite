@@ -20,6 +20,8 @@ namespace FieldSuite.Controls.GeneralLinks
 		public static string MailLinkIcon = "/sitecore modules/shell/field suite/images/mail.png";
 		public static string AnchorLinkType = "anchor";
 		public static string AnchorLinkIcon = "/sitecore modules/shell/field suite/images/application.png";
+		public static string MediaLinkType = "media";
+		public static string InternalLinkType = "internal";
 		
 		[XmlIgnore()]
 		[NonSerialized]

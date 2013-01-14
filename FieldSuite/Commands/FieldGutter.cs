@@ -27,43 +27,22 @@ namespace FieldSuite.Commands
 			string fieldGutterHtml = string.Empty;
 			string fieldId = context.Parameters["fieldid"];
 			string id = context.Parameters["id"];
-			if (string.IsNullOrEmpty(id))
-			{
-				SheerResponse.Eval("FieldSuite.Fields.UpdateFieldGutter(\"" + fieldId + "\",\"" + fieldGutterHtml + "\")");
-				return;
-			}
 
-			Item item = Sitecore.Context.ContentDatabase.GetItem(id);
-			if (item.IsNull())
-			{
-				SheerResponse.Eval("FieldSuite.Fields.UpdateFieldGutter(\"" + fieldId + "\",\"" + fieldGutterHtml + "\")");
-				return;
-			}
-
-			fieldGutterHtml = GetFieldGutterHtml(new FieldGutterArgs(item, fieldId));
-			SheerResponse.Eval("FieldSuite.Fields.UpdateFieldGutter(\"" + fieldId + "\",\"" + HttpUtility.HtmlEncode(fieldGutterHtml) + "\")");
+			Item item = (string.IsNullOrEmpty(id)) ? null : Sitecore.Context.ContentDatabase.GetItem(id);
+			if(item.IsNotNull())
+				fieldGutterHtml = HttpUtility.HtmlEncode(GetFieldGutterHtml(new FieldGutterArgs(item, fieldId)));
+			
+			SheerResponse.Eval("FieldSuite.Fields.UpdateFieldGutter(\"" + fieldId + "\",\"" + fieldGutterHtml + "\")");
 		}
 
 		protected virtual string GetFieldGutterHtml(FieldGutterArgs args)
 		{
-			if (args == null || args.InnerItem.IsNull())
-			{
-				return string.Empty;
-			}
-
-			IFieldGutterProcessor fieldGutterProcessor = FieldGutterProcessorFactory.GetProcessor();
+			IFieldGutterProcessor fieldGutterProcessor = (args == null || args.InnerItem.IsNull()) ? null : FieldGutterProcessorFactory.GetProcessor();
 			if (fieldGutterProcessor == null)
-			{
 				return string.Empty;
-			}
-
+			
 			string fieldGutterHtml = fieldGutterProcessor.Process(args);
-			if (string.IsNullOrEmpty(fieldGutterHtml))
-			{
-				return string.Empty;
-			}
-
-			return fieldGutterHtml;
+			return (string.IsNullOrEmpty(fieldGutterHtml)) ? string.Empty : fieldGutterHtml;
 		}
 	}
 }

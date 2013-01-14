@@ -21,8 +21,15 @@ if (FieldSuite.Html == null) {
 	FieldSuite.Html = [];
 }
 
-FieldSuite.Fields.Treelist.SelectedItem = function (fieldId) {
-	var selectedItems = $$('#' + fieldId + ' .scContentTreeNodeActive');
+FieldSuite.Fields.Treelist.SelectedItem = function (fieldId, event) {
+	if (event) {
+		var selectedItem = Event.element(event);
+		if (selectedItem) {
+			return selectedItem;
+		}
+	}
+
+	var selectedItems = $('#' + fieldId + ' .scContentTreeNodeActive');
 	if (selectedItems == null || selectedItems.length == 0) {
 		return null;
 	}
@@ -46,10 +53,10 @@ FieldSuite.Fields.Treelist.AddItemToContent = function (fieldId, html) {
 	return false;
 }
 
-FieldSuite.Fields.Treelist.AddItem = function (fieldId) {
+FieldSuite.Fields.Treelist.AddItem = function (fieldId, event) {
 
 	//get selected item
-	var selectedItem = FieldSuite.Fields.Treelist.SelectedItem(fieldId);
+	var selectedItem = FieldSuite.Fields.Treelist.SelectedItem(fieldId, event);
 	if (selectedItem == null) {
 		alert('Please select an item');
 		return;
@@ -83,13 +90,8 @@ FieldSuite.Fields.Treelist.AddItem = function (fieldId) {
 		includedTemplates = includedElement.value;
 	}
 
-	var database = '';
-	var databaseElement = $(fieldId + '_all_Database');
-	if (databaseElement != null && includedElement.value != null) {
-		database = databaseElement.value;
-	}
 	//launch serverside command
-	scForm.invoke('fieldsuite:treelist.additem(fieldid=' + fieldId + ', itemid=' + itemId + ', excludedTemplates=' + excludedTemplates + ', includedTemplates=' + includedTemplates + ', database=' + database + ')');
+	scForm.invoke('fieldsuite:treelist.additem(fieldid=' + fieldId + ', itemid=' + itemId + ', excludedTemplates=' + excludedTemplates + ', includedTemplates=' + includedTemplates + ')');
 	return false;
 }
 
