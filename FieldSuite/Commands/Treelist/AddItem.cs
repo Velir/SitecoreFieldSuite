@@ -11,6 +11,8 @@ using Sitecore.Web.UI.Sheer;
 using Sitecore.Data.Items;
 using Velir.SitecoreLibrary.Extensions;
 using FieldSuite.Controls.ListItem;
+using FieldSuite.FieldSource;
+using System.Collections.Generic;
 
 namespace FieldSuite.Commands.Treelist
 {
@@ -38,6 +40,11 @@ namespace FieldSuite.Commands.Treelist
 			string excludedTemplates = context.Parameters["excludedTemplates"];
 			string includedTemplates = context.Parameters["includedTemplates"];
 			string database = context.Parameters["database"];
+
+			//make these values available from an enumerable
+			string fieldSource = string.Format("IncludeTemplatesForSelection={0}&ExcludeTemplatesForSelection={1}", includedTemplates, excludedTemplates);
+			ParameterizedFieldSource pfs = new ParameterizedFieldSource(fieldSource);
+			
 			if(string.IsNullOrEmpty(database))
 			{
 				database = string.Empty;
@@ -49,7 +56,7 @@ namespace FieldSuite.Commands.Treelist
 			}
 
 			//is this item available to be added?
-			if (!IsAvailableToBeAdded(itemid, excludedTemplates, includedTemplates, database))
+			if (!IsAvailableToBeAdded(itemid, pfs.ExcludeTemplatesForSelection, pfs.IncludeTemplatesForSelection, database)) 
 			{
 				return;
 			}
@@ -81,7 +88,7 @@ namespace FieldSuite.Commands.Treelist
 			SheerResponse.Eval("FieldSuite.Fields.Treelist.AddItemToContent(\"" + args.Parameters["fieldid"] + "\",\"" + html + "\")");
 		}
 
-		private bool IsAvailableToBeAdded(string itemId, string excludedTemplates, string includedTemplates, string database)
+		private bool IsAvailableToBeAdded(string itemId, IEnumerable<string> excludedTemplates, IEnumerable<string> includedTemplates, string database)
 		{
 			Database db = Context.ContentDatabase;
 			if(!string.IsNullOrEmpty(database))
@@ -96,7 +103,7 @@ namespace FieldSuite.Commands.Treelist
 			}
 
 			//is part of the available list of templates)
-			if (!string.IsNullOrEmpty(includedTemplates))
+			if (includedTemplates.Any())
 			{
 				if (includedTemplates.Contains(item.TemplateName))
 				{
@@ -108,7 +115,7 @@ namespace FieldSuite.Commands.Treelist
 			}
 
 			//is part of the excluded list of templates
-			if (!string.IsNullOrEmpty(excludedTemplates) && excludedTemplates.Contains(item.TemplateName))
+			if (excludedTemplates.Any() && excludedTemplates.Contains(item.TemplateName))
 			{
 				return false;
 			}

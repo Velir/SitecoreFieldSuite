@@ -91,7 +91,7 @@ namespace FieldSuite.FieldSource
 		/// <returns></returns>
 		private IEnumerable<string> SetupEnums(string source) {
 			IEnumerable<string> values = Enumerable.Empty<string>();
-			string[] items = source.Split(',');
+			string[] items = source.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries);
 			if (items.Any())
 				values = values.Concat(items);
 			return values;
