@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Sitecore.Data.Items;
-using FieldSuite.FieldSource;
 
 namespace FieldSuite
 {
