@@ -89,6 +89,8 @@
     <Compile Include="FieldSource\ParameterizedFieldSourceFactory.cs" />
     <Compile Include="FieldSource\QueryFieldSource.cs" />
     <Compile Include="FieldSource\QueryFieldSourceFactory.cs" />
+    <Compile Include="Fields\IDField.cs" />
+    <Compile Include="Fields\IDListField.cs" />
     <Compile Include="IFieldSuiteField.cs" />
     <Compile Include="ImageMapping\AFieldSuiteImage.cs" />
     <Compile Include="ImageMapping\FieldSuiteImage.cs" />
