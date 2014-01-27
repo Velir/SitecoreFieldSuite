@@ -8,6 +8,7 @@
 	clear:both;
 	position:relative;
 	overflow:hidden;
+	height: 24px;
 }
 
 .velirFieldSelected, .velirFieldUnSelected
