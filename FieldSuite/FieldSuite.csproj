@@ -168,8 +168,6 @@
     <Content Include="Files\sitecore modules\Shell\Field Suite\Styles\FieldSuite.Fields.GeneralLinks.css" />
     <Content Include="Files\sitecore modules\Shell\Field Suite\Styles\FieldSuite.Fields.Images.css" />
     <Content Include="Files\sitecore modules\Shell\Field Suite\Styles\FieldSuite.Fields.Treelist.css" />
-    <Content Include="Files\sitecore\shell\Applications\Content Manager\Default.aspx" />
-    <Content Include="Files\sitecore\shell\Applications\Content Manager\FieldEditor.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Packages\" />
