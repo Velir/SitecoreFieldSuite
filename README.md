@@ -2,7 +2,6 @@ SitecoreFieldSuite
 ==================
 
 Author: Tim Braga
-<br/>Email: tim.braga@velir.com
 <br/>Twitter: @tbraga01
 
 The Field Suite module provides Sitecore users a more streamlined and informational approach to content authoring.  This is achieved by 
@@ -13,7 +12,7 @@ customizations to the module.
 
 The Field Suite provides the following functionality:
 
-* Referenced item hover, displaying tooltips that show an item’s path
+* Referenced item hover, displaying tooltips that show an itemï¿½s path
 * Auto-Publishing of referenced items
 * In-line editing of referenced items using the Edit Form modal
 * Direct Navigation to a referenced item using the Go to Item button
@@ -21,6 +20,10 @@ The Field Suite provides the following functionality:
 * 5 revamped fields types (multilist, treelist, treelistEx, droplink and droptree)
 * Introduction of the Images Field type
 
+####Update v1.2 (2014-01-27)
+* Now compatible with Sitecore 7.1
+* Removed Sitecore .aspx files from package
+
 Install the Package (You need to sign into Sitecore's Marketplace): [Sitecore Marketplace](http://marketplace.sitecore.net/Modules/Field_Suite.aspx)
-<br/>Download the [Instructional Guide:](http://blog.velir.com/wp-content/uploads/2012/10/Field-Suite-Instructional-Guide1.pdf)
-<br/>[Blog Post:](http://blog.velir.com/?p=2538)
+<br/>Download the [Instructional Guide](http://blog.velir.com/wp-content/uploads/2012/10/Field-Suite-Instructional-Guide1.pdf)
+<br/>Read about it on the Velir [Blog](http://blog.velir.com/?p=2538)
