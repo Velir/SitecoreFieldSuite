@@ -18,15 +18,13 @@
 	float:left; 
 }
 
-.velirItem a
-{
-	padding:2px 3px 2px 1px;
-	border:1px solid white;
+.velirItem a {
+    padding: 2px 3px 2px 1px;
+    border: 1px solid white;
 }
 
 .velirFieldUnSelected a:hover, .velirFieldSelected a:hover, .velirFieldUnSelected.selected a, .velirFieldSelected.selected a
 {
-	padding:2px 3px 2px 1px;
 	border:1px solid #99DEFD;
 	background:url("/sitecore/shell/themes/standard/Images/Tree/TreeNodeActiveBackground.png") repeat-x scroll 0 0 #D5EFFC;
 }
