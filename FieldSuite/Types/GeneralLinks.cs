@@ -21,6 +21,8 @@ using Sitecore.Diagnostics;
 using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 using Velir.SitecoreLibrary.Extensions;
+using Sitecore.Resources.Media;
+using Sitecore.Links;
 
 namespace FieldSuite.Types
 {
@@ -46,9 +48,15 @@ namespace FieldSuite.Types
 		{
 		}
 
+        public GeneralLinks(Item item, string fieldName)
+        {
+            this.Value = item.Fields[fieldName].ToString();
+        }
+
 		public GeneralLinks(Item item, TextField field)
+            : this(item, field.InnerField.Name)
 		{
-			this.Value = item.Fields[field.InnerField.Name].ToString();
+			
 		}
 
 		public override void HandleMessage(Message message)
@@ -140,7 +148,33 @@ namespace FieldSuite.Types
 						continue;
 					}
 
-					_linkItems.Add((GeneralLinkItem)obj);
+                    //update the url for internal items
+
+                    GeneralLinkItem generalLinkItem = (GeneralLinkItem)obj;
+
+                    if (!string.IsNullOrEmpty(generalLinkItem.Id))
+                    {
+                        ID linkItemId = new ID(generalLinkItem.Id);
+                        Item item = Sitecore.Context.Database.GetItem(linkItemId);
+
+                        if (item != null)
+                        {
+                            switch (generalLinkItem.LinkType)
+                            {
+                                case GeneralLinkItem.InternalLinkType:
+                                    UrlOptions urlOptions = LinkManager.GetDefaultUrlOptions();
+                                    urlOptions.AlwaysIncludeServerUrl = true;
+                                    generalLinkItem.Url = LinkManager.GetItemUrl(item, urlOptions);
+                                    break;
+
+                                case GeneralLinkItem.MediaLinkType:
+                                    generalLinkItem.Url = MediaManager.GetMediaUrl(item);
+                                    break;
+                            }
+                        }
+                    }
+
+					_linkItems.Add(generalLinkItem);
 				}
 
 				return _linkItems;
