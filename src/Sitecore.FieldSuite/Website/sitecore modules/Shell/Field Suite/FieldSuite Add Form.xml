@@ -2,7 +2,7 @@
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
 	<FieldSuiteAddForm>
 		<FormPage>
-			<CodeBeside Type="FieldSuite.Xaml.FieldSuiteAddForm,FieldSuite"/>
+			<CodeBeside Type="Sitecore.SharedSource.FieldSuite.Xaml.FieldSuiteAddForm,Sitecore.SharedSource.FieldSuite"/>
 			<Stylesheet Src="/sitecore/shell/themes/standard/Internet Explorer/default.css"/>
 			<Stylesheet Src="/sitecore/shell/themes/standard/default/Content Manager.css"/>
 			<Stylesheet Src="/sitecore/shell/themes/standard/Internet Explorer/Content Manager.css"/>
