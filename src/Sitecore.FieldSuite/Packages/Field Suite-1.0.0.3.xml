@@ -2,8 +2,8 @@
   <Metadata>
     <metadata>
       <PackageName>Field Suite</PackageName>
-      <Author>Tim Braga, Ben Lipson</Author>
-      <Version>20140127</Version>
+      <Author>Velir</Author>
+      <Version>20140804</Version>
       <Revision />
       <License />
       <Comment>Update: This will no longer replace Sitecore files</Comment>
@@ -108,8 +108,8 @@
       <Entries>
         <x-item>/App_Config/Include/FieldSuite.config</x-item>
         <x-item>/App_Config/Include/ItemComparer.config</x-item>
-        <x-item>/bin/Velir.SitecoreLibrary.dll</x-item>
-        <x-item>/bin/Velir.SitecoreLibrary.Modules.PublishedItemComparer.dll</x-item>
+        <x-item>/bin/Sitecore.SharedSource.Commons.dll</x-item>
+        <x-item>/bin/Sitecore.SharedSource.PublishedItemComparer.dll</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Images/accept16x16.png</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Images/add.png</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Images/add32x32.png</x-item>
@@ -131,7 +131,7 @@
         <x-item>/sitecore modules/Shell/Field Suite/Images/v-withcircle.png</x-item>
         <x-item>/sitecore modules/Shell/ItemComparer/ItemComparer.css</x-item>
         <x-item>/sitecore modules/Shell/ItemComparer/ItemComparerViewer.xml</x-item>
-        <x-item>/bin/FieldSuite.dll</x-item>
+        <x-item>/bin/Sitecore.SharedSource.FieldSuite.dll</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.Droplink.js</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.DropTree.js</x-item>
         <x-item>/sitecore modules/Shell/Field Suite/Scripts/FieldSuite.Fields.Images.js</x-item>
