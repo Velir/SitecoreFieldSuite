@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {75F2734C-F8DA-4B83-8D42-2A0156E38950}
+database: core
+path: /sitecore/system/Field types/Field Suite/Field Suite Droplink/Menu/Edit Item
+parent: {49C037D8-8033-4749-AF6A-D09D63D52D10}
+name: Edit Item
+master: {00000000-0000-0000-0000-000000000000}
+template: {998B965E-6AB8-4568-810F-8101D60D0CC3}
+templatekey: Menu item
+
+----field----
+field: {CAB694FC-E37C-44EB-9012-488B775CF638}
+name: Message
+key: message
+content-length: 47
+
+FieldSuite.Fields.Droplink.EditItem('$Target');
+----field----
+field: {953B8F86-0E4E-47EA-8CBB-2772499C6790}
+name: Show In Field Editor
+key: show in field editor
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: d698074a-bc47-4e71-b331-7d1bcb3da121
+
+----field----
+field: {9B72A62B-2775-423D-B17A-EC34A9F31AF8}
+name: Display name
+key: display name
+content-length: 9
+
+Edit Item
+----field----
+field: {CA4B5718-73C8-4DCC-A1B4-962C8F2069D6}
+name: Client Event
+key: client event
+content-length: 1
+
+1
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20120316T172000
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d698074a-bc47-4e71-b331-7d1bcb3da121
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20121017T115914:634860719545464331
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

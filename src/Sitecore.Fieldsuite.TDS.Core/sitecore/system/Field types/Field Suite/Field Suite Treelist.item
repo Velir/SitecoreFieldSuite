@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {1A670679-36D2-4805-8392-917B077D20F9}
+database: core
+path: /sitecore/system/Field types/Field Suite/Field Suite Treelist
+parent: {EEEBEB6F-CB60-4B3A-812F-8709FEE98C97}
+name: Field Suite Treelist
+master: {00000000-0000-0000-0000-000000000000}
+template: {F8A17D6A-118E-4CD7-B5F5-88FF37A4F237}
+templatekey: Template field type
+
+----field----
+field: {6BF5ED07-BC70-42F4-BB77-C017D340950E}
+name: Assembly
+key: assembly
+content-length: 0
+
+
+----field----
+field: {9FE6154A-A16E-4827-99F6-F51533C34EC8}
+name: Class
+key: class
+content-length: 0
+
+
+----field----
+field: {0F0A5388-0467-4A45-95C0-729B1D6DB9FD}
+name: Control
+key: control
+content-length: 19
+
+fieldsuite:Treelist
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 59
+
+/sitecore modules/shell/field suite/images/v-withcircle.png
+----version----
+language: en
+version: 1
+revision: e46761c7-2c2f-4b1b-8b69-9521ba2d34ef
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20070416T123600
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e46761c7-2c2f-4b1b-8b69-9521ba2d34ef
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20121021T213253:634864519737311916
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
