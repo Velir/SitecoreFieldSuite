@@ -5,7 +5,7 @@ using System.Text;
 
 using Sitecore.Data.Items;
 
-namespace FieldSuite.FieldSource
+namespace Sitecore.SharedSource.FieldSuite.FieldSource
 {
 	public abstract class AbstractFieldSource
 	{

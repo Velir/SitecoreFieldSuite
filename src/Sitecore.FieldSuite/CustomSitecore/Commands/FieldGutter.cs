@@ -11,10 +11,10 @@ using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Data.Items;
-using FieldSuite.Controls.ListItem;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 
-namespace FieldSuite.Commands
+namespace Sitecore.SharedSource.FieldSuite.Commands
 {
 	public class FieldGutter : Command
 	{

@@ -11,7 +11,7 @@ using Sitecore.Data.Query;
 using Sitecore.Web;
 using Sitecore;
 
-namespace FieldSuite.FieldSource
+namespace Sitecore.SharedSource.FieldSuite.FieldSource
 {
 	/// <summary>
 	/// A ParameterizedFieldSource contains a querystring of information to setup the string.

@@ -29,7 +29,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
-namespace FieldSuite.Editors
+namespace Sitecore.SharedSource.FieldSuite.Editors
 {
 	[DebuggerDisplay("{TemplateSection}")]
 	public class FieldSuiteEditor

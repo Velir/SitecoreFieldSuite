@@ -17,9 +17,9 @@ using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Xml;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Editors;
+using Sitecore.SharedSource.FieldSuite.Editors;
 
-namespace FieldSuite.Xaml
+namespace Sitecore.SharedSource.FieldSuite.Xaml
 {
 	public class FieldSuiteEditForm : BaseForm
 	{

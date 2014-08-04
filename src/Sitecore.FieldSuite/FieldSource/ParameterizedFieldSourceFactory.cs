@@ -7,7 +7,7 @@ using Sitecore.Data;
 
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.FieldSource
+namespace Sitecore.SharedSource.FieldSuite.FieldSource
 {
 	public class ParameterizedFieldSourceFactory
 	{

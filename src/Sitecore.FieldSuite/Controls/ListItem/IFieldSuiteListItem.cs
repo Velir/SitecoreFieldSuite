@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FieldSuite.Controls.ListItem
+namespace Sitecore.SharedSource.FieldSuite.Controls.ListItem
 {
 	public interface IFieldSuiteListItem
 	{

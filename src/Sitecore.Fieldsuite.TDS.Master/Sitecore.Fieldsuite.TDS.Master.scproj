@@ -55,6 +55,7 @@
     <SitecoreItem Include="sitecore\system\Modules\Item Comparer Settings.item">
       <Icon>/temp/IconCache/Network/16x16/earth_view.png</Icon>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates.item">
       <Icon>/temp/IconCache/Applications/16x16/form_blue.png</Icon>

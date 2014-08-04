@@ -1,7 +1,7 @@
 ﻿using System;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.FieldGutter
+namespace Sitecore.SharedSource.FieldSuite.FieldGutter
 {
 	public class FieldGutterArgs
 	{

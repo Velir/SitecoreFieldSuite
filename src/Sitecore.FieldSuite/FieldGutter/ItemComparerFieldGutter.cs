@@ -8,7 +8,7 @@ using Sitecore.SharedSource.PublishedItemComparer.Domain;
 using Sitecore.SharedSource.PublishedItemComparer.Utils;
 using Sitecore.SharedSource.PublishedItemComparer.Validations;
 
-namespace FieldSuite.FieldGutter
+namespace Sitecore.SharedSource.FieldSuite.FieldGutter
 {
 	public class ItemComparerFieldGutter : IFieldGutter
 	{

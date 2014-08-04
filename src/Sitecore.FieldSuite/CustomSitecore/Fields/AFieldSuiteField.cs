@@ -10,14 +10,14 @@ using Sitecore.Resources;
 using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Data.Items;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Controls;
-using FieldSuite.Controls.ListItem;
-using FieldSuite.FieldGutter;
-using FieldSuite.FieldSource;
-using FieldSuite.Placeholders;
+using Sitecore.SharedSource.FieldSuite.Controls;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.FieldSource;
+using Sitecore.SharedSource.FieldSuite.Placeholders;
 using DateTime = Sitecore.Shell.Applications.ContentEditor.DateTime;
 
-namespace FieldSuite
+namespace Sitecore.SharedSource.FieldSuite
 {
 	public abstract class AFieldSuiteField : MultilistEx, IFieldSuiteField
 	{

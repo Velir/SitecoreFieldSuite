@@ -7,7 +7,7 @@ using Sitecore.Resources.Media;
 using Sitecore.Data.Items;
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.ImageMapping
+namespace Sitecore.SharedSource.FieldSuite.ImageMapping
 {
 	public class MediaImage : AFieldSuiteImage
 	{

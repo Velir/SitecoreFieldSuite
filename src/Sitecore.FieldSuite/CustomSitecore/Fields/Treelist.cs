@@ -18,13 +18,13 @@ using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Web.UI.WebControls;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Controls;
-using FieldSuite.Controls.ListItem;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.Controls;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 using DateTime = System.DateTime;
-using FieldSuite.FieldSource;
+using Sitecore.SharedSource.FieldSuite.FieldSource;
 
-namespace FieldSuite.Types
+namespace Sitecore.SharedSource.FieldSuite.Types
 {
 	public class Treelist : AFieldSuiteField
 	{

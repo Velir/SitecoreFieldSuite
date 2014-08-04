@@ -18,10 +18,10 @@ using Sitecore.Web.UI;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Data.Items;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Controls.ListItem;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 
-namespace FieldSuite.Types
+namespace Sitecore.SharedSource.FieldSuite.Types
 {
 	public class TreelistEx : WebControl, IContentField, IMessageHandler
 	{

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using FieldSuite.Controls.GeneralLinks;
+using Sitecore.SharedSource.FieldSuite.Controls.GeneralLinks;
 
-namespace FieldSuite.Util
+namespace Sitecore.SharedSource.FieldSuite.Util
 {
 	public class XmlUtil
 	{

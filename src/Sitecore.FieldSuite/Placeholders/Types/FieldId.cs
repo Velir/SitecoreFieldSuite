@@ -5,7 +5,7 @@ using System.Text;
 using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.Placeholders.Types
+namespace Sitecore.SharedSource.FieldSuite.Placeholders.Types
 {
 	public class FieldId : IFieldPlaceholder
 	{

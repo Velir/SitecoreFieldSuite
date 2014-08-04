@@ -6,9 +6,9 @@ using Sitecore.Resources;
 
 using Sitecore.Data.Items;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 
-namespace FieldSuite.Controls.ListItem
+namespace Sitecore.SharedSource.FieldSuite.Controls.ListItem
 {
 	public class FieldSuiteListItem : IFieldSuiteListItem
 	{

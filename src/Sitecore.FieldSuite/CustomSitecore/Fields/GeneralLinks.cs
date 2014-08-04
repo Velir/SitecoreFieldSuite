@@ -9,10 +9,10 @@ using System.Web;
 using System.Web.UI;
 using System.Xml;
 using System.Xml.Linq;
-using FieldSuite.Controls.GeneralLinks;
-using FieldSuite.Controls.ListItem;
-using FieldSuite.FieldGutter;
-using FieldSuite.Util;
+using Sitecore.SharedSource.FieldSuite.Controls.GeneralLinks;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.Util;
 using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
@@ -22,7 +22,7 @@ using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.Types
+namespace Sitecore.SharedSource.FieldSuite.Types
 {
 	public class GeneralLinks : AFieldSuiteField
 	{

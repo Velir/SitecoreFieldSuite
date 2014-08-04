@@ -5,7 +5,7 @@ using Sitecore.Shell.Framework.Commands;
 using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 
-namespace FieldSuite.Commands.ImageFields
+namespace Sitecore.SharedSource.FieldSuite.Commands.ImageFields
 {
 	public class AddItem : Command
 	{

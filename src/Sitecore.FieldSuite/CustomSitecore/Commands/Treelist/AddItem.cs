@@ -10,9 +10,9 @@ using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Data.Items;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
 
-namespace FieldSuite.Commands.Treelist
+namespace Sitecore.SharedSource.FieldSuite.Commands.Treelist
 {
 	public class AddItem : Command
 	{

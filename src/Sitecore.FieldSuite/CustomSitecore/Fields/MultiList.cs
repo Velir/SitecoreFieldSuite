@@ -7,7 +7,7 @@ using Sitecore.Globalization;
 using Sitecore.Resources;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.Types
+namespace Sitecore.SharedSource.FieldSuite.Types
 {
 	public class MultiList : AFieldSuiteField
 	{

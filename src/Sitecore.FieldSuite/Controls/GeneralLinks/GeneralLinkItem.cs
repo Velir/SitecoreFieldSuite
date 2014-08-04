@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace FieldSuite.Controls.GeneralLinks
+namespace Sitecore.SharedSource.FieldSuite.Controls.GeneralLinks
 {
 	[Serializable]
 	[XmlRoot(ElementName = "link")]

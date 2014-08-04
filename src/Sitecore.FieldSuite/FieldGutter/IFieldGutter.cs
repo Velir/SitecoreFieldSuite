@@ -1,6 +1,6 @@
 using System;
 
-namespace FieldSuite.FieldGutter
+namespace Sitecore.SharedSource.FieldSuite.FieldGutter
 {
 	public interface IFieldGutter
 	{

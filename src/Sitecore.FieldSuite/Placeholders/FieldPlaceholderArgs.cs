@@ -1,7 +1,7 @@
 ﻿using System;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.Placeholders
+namespace Sitecore.SharedSource.FieldSuite.Placeholders
 {
 	public class FieldPlaceholderArgs
 	{

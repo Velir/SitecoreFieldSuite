@@ -11,7 +11,7 @@ using Sitecore.Publishing.Pipelines.Publish;
 using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.Pipeline
+namespace Sitecore.SharedSource.FieldSuite.Pipeline
 {
 	public class AutoPublishReferenceItems : PublishProcessor
 	{

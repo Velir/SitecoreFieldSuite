@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.ImageMapping
+namespace Sitecore.SharedSource.FieldSuite.ImageMapping
 {
 	public class FieldSuiteImageArgs
 	{

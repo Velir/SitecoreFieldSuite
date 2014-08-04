@@ -21,10 +21,10 @@ using Sitecore.Web.UI.Sheer;
 using Sitecore.Web.UI.WebControls;
 using Sitecore.Xml;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Editors;
-using FieldSuite.ImageMapping;
+using Sitecore.SharedSource.FieldSuite.Editors;
+using Sitecore.SharedSource.FieldSuite.ImageMapping;
 
-namespace FieldSuite.Xaml
+namespace Sitecore.SharedSource.FieldSuite.Xaml
 {
 	public class FieldSuiteImagesEditForm : BaseForm
 	{

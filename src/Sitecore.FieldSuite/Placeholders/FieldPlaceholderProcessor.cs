@@ -7,7 +7,7 @@ using Sitecore.Configuration;
 using Sitecore.Data.Items;
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.Placeholders
+namespace Sitecore.SharedSource.FieldSuite.Placeholders
 {
 	public class FieldPlaceholderProcessor : IFieldPlaceholderProcessor
 	{

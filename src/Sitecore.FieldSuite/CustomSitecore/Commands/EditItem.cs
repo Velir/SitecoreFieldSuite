@@ -7,9 +7,9 @@ using Sitecore.Shell.Framework.Commands;
 using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 
-namespace FieldSuite.Commands
+namespace Sitecore.SharedSource.FieldSuite.Commands
 {
 	public class EditItem : Command
 	{

@@ -6,9 +6,9 @@ using Sitecore.Web;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Web.UI.WebControls;
-using FieldSuite.ImageMapping;
+using Sitecore.SharedSource.FieldSuite.ImageMapping;
 
-namespace FieldSuite.Xaml
+namespace Sitecore.SharedSource.FieldSuite.Xaml
 {
 	public class FieldSuiteAddForm : BaseForm
 	{

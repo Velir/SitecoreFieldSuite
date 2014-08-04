@@ -5,7 +5,7 @@ using System.Text;
 using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.FieldGutter
+namespace Sitecore.SharedSource.FieldSuite.FieldGutter
 {
 	public interface IFieldGutterProcessor
 	{

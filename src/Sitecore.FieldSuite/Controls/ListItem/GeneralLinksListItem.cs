@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using FieldSuite.Controls.GeneralLinks;
-using FieldSuite.Controls.ListItem;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.Controls.GeneralLinks;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Resources;
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.Controls.ListItem
+namespace Sitecore.SharedSource.FieldSuite.Controls.ListItem
 {
 	public class GeneralLinksListItem : FieldSuiteListItem
 	{

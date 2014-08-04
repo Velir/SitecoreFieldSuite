@@ -3,7 +3,7 @@ using System.Web.UI.HtmlControls;
 using Sitecore.Diagnostics;
 using Sitecore.Shell.Applications.ContentEditor.Pipelines.RenderContentEditor;
 
-namespace FieldSuite.Editors.ContentEditor
+namespace Sitecore.SharedSource.FieldSuite.Editors.ContentEditor
 {
 	public class RenderFieldSuiteContentEditor
 	{

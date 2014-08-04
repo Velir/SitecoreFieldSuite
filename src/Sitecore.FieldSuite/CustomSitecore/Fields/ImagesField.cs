@@ -8,11 +8,11 @@ using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Resources;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Controls.ListItem;
-using FieldSuite.FieldGutter;
-using FieldSuite.ImageMapping;
+using Sitecore.SharedSource.FieldSuite.Controls.ListItem;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.ImageMapping;
 
-namespace FieldSuite.Types
+namespace Sitecore.SharedSource.FieldSuite.Types
 {
 	public class ImagesField : AFieldSuiteField
 	{

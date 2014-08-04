@@ -22,14 +22,15 @@ using Sitecore.Shell.Applications.ContentEditor.Pipelines.RenderContentEditor;
 using Sitecore.Web.UI;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.Placeholders;
+using Sitecore.SharedSource.FieldSuite.Placeholders;
 using Control = System.Web.UI.Control;
 using Memo = Sitecore.Web.UI.HtmlControls.Memo;
 using WebControl = System.Web.UI.WebControls.WebControl;
-using FieldSuite.FieldSource;
+//using Text = System.Web.UI.
+using Sitecore.SharedSource.FieldSuite.FieldSource;
 using Sitecore.Web.UI.HtmlControls.Data;
 
-namespace FieldSuite.Editors.ContentEditor
+namespace Sitecore.SharedSource.FieldSuite.Editors.ContentEditor
 {
 	public class FieldSuiteEditorFormatter
 	{
@@ -94,7 +95,7 @@ namespace FieldSuite.Editors.ContentEditor
 				{
 					return new Password();
 				}
-				return new Text();
+				return new Sitecore.Shell.Applications.ContentEditor.Text();
 			}
 			System.Web.UI.Control webControl = Resource.GetWebControl(fieldType["Control"]);
 			if (webControl == null)
@@ -108,7 +109,7 @@ namespace FieldSuite.Editors.ContentEditor
 			}
 			if (webControl == null)
 			{
-				webControl = new Text();
+				webControl = new Sitecore.Shell.Applications.ContentEditor.Text();
 			}
 			return webControl;
 		}

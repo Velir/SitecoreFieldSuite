@@ -25,12 +25,12 @@ using Sitecore.Web.UI.HtmlControls.Data;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Web.UI.WebControls;
 
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 using ContextMenu = Sitecore.Web.UI.HtmlControls.ContextMenu;
 using DateTime = Sitecore.Shell.Applications.ContentEditor.DateTime;
 using Version = Sitecore.Data.Version;
 
-namespace FieldSuite.Controls
+namespace Sitecore.SharedSource.FieldSuite.Controls
 {
 	public class FieldSuiteTreeviewEx : WebControl
 	{

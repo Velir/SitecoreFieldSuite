@@ -9,7 +9,7 @@ using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.Commands
+namespace Sitecore.SharedSource.FieldSuite.Commands
 {
 	public class TemplateIconUpdate : Command
 	{

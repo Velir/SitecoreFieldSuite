@@ -9,7 +9,7 @@ using Sitecore.Text;
 using Sitecore.Data.Items;
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.FieldSource
+namespace Sitecore.SharedSource.FieldSuite.FieldSource
 {
 	public class QueryFieldSourceFactory
 	{

@@ -9,7 +9,7 @@ using Sitecore.Configuration;
 using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Data.Items;
 
-namespace FieldSuite.FieldGutter
+namespace Sitecore.SharedSource.FieldSuite.FieldGutter
 {
 	public class FieldGutterProcessorFactory
 	{

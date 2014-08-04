@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Sitecore.Data.Items;
-using FieldSuite.FieldSource;
+using Sitecore.SharedSource.FieldSuite.FieldSource;
 
-namespace FieldSuite
+namespace Sitecore.SharedSource.FieldSuite
 {
 	public interface IFieldSuiteField
 	{

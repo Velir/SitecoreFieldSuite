@@ -5,10 +5,10 @@ using Sitecore.Diagnostics;
 using Sitecore.Data.Items;
 using Sitecore.Resources;
 using Sitecore.SharedSource.Commons.Extensions;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 using System.Text;
 
-namespace FieldSuite.Types
+namespace Sitecore.SharedSource.FieldSuite.Types
 {
 	public class Droplink : AFieldSuiteField
 	{

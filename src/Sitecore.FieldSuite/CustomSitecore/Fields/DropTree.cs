@@ -9,9 +9,9 @@ using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Data.Items;
-using FieldSuite.FieldGutter;
+using Sitecore.SharedSource.FieldSuite.FieldGutter;
 
-namespace FieldSuite.Types
+namespace Sitecore.SharedSource.FieldSuite.Types
 {
 	public class DropTree : Tree
 	{

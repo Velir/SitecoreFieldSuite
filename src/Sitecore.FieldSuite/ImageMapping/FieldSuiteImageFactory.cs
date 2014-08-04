@@ -10,7 +10,7 @@ using Sitecore.Data.Items;
 using Sitecore.Resources.Media;
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.ImageMapping
+namespace Sitecore.SharedSource.FieldSuite.ImageMapping
 {
 	public class FieldSuiteImageFactory
 	{

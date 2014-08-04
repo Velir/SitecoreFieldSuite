@@ -7,7 +7,7 @@ using Sitecore.Web.UI.HtmlControls.Data;
 
 using Sitecore.SharedSource.Commons.Extensions;
 
-namespace FieldSuite.FieldSource
+namespace Sitecore.SharedSource.FieldSuite.FieldSource
 {
 	/// <summary>
 	/// The QueryFieldSource contains a Sitecore Query that is run against the Context Item
