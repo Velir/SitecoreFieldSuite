@@ -171,7 +171,7 @@ namespace Sitecore.SharedSource.FieldSuite.Types
 			StringBuilder sb = new StringBuilder();
 			foreach (GeneralLinkItem linkItem in LinkItems)
 			{
-				if (linkItem == null || string.IsNullOrEmpty(linkItem.Url))
+				if (linkItem == null)
 				{
 					continue;
 				}
