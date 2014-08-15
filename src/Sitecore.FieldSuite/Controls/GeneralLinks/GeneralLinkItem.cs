@@ -11,17 +11,17 @@ namespace Sitecore.SharedSource.FieldSuite.Controls.GeneralLinks
 	[XmlRoot(ElementName = "link")]
 	public class GeneralLinkItem
 	{
-		public static string DefaultLinkText = "Set Link Text";
-		public static string ExternalLinkType = "external";
-		public static string ExternalLinkIcon = "/sitecore modules/shell/field suite/images/externalLink.png";
-		public static string JavascriptLinkType = "javascript";
-		public static string JavascriptLinkIcon = "/sitecore modules/shell/field suite/images/code_javascript.png";
-		public static string MailLinkType = "mailto";
-		public static string MailLinkIcon = "/sitecore modules/shell/field suite/images/mail.png";
-		public static string AnchorLinkType = "anchor";
-		public static string AnchorLinkIcon = "/sitecore modules/shell/field suite/images/application.png";
-		public static string MediaLinkType = "media";
-		public static string InternalLinkType = "internal";
+        public const string DefaultLinkText = "Set Link Text";
+		public const string ExternalLinkType = "external";
+        public const string ExternalLinkIcon = "/sitecore modules/shell/field suite/images/externalLink.png";
+        public const string JavascriptLinkType = "javascript";
+        public const string JavascriptLinkIcon = "/sitecore modules/shell/field suite/images/code_javascript.png";
+        public const string MailLinkType = "mailto";
+        public const string MailLinkIcon = "/sitecore modules/shell/field suite/images/mail.png";
+        public const string AnchorLinkType = "anchor";
+        public const string AnchorLinkIcon = "/sitecore modules/shell/field suite/images/application.png";
+        public const string MediaLinkType = "media";
+        public const string InternalLinkType = "internal";
 		
 		[XmlIgnore()]
 		[NonSerialized]
@@ -59,5 +59,6 @@ namespace Sitecore.SharedSource.FieldSuite.Controls.GeneralLinks
 
 		[XmlAttribute("linktext")]
 		public string LinkText { get { return _linkText; } set { _linkText = value; } }
+
 	}
 }
