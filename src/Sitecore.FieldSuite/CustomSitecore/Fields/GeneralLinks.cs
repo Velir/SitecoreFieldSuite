@@ -116,20 +116,20 @@ namespace Sitecore.SharedSource.FieldSuite.Types
 					return _linkItems;
 				}
 
-				if (this.Value == null || string.IsNullOrEmpty(this.Value.ToString()))
+				if (Value == null || string.IsNullOrEmpty(Value))
 				{
 					return new List<GeneralLinkItem>();
 				}
 
-				TextReader textReader = new StringReader(this.Value.ToString());
+				TextReader textReader = new StringReader(Value);
 
 				XmlDocument document = new XmlDocument();
 				document.Load(textReader);
 
 				XDocument xDocument = XDocument.Load(document.CreateNavigator().ReadSubtree());
 
-				IEnumerable<XElement> items = xDocument.Descendants("link");
-				if (items.Count() == 0)
+				IEnumerable<XElement> items = xDocument.Descendants("link").ToList();
+				if (!items.Any())
 				{
 					return new List<GeneralLinkItem>();
 				}
