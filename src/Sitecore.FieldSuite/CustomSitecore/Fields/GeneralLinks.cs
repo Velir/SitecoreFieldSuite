@@ -19,6 +19,7 @@ using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Text;
+using Sitecore.Web;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.SharedSource.Commons.Extensions;
 using Sitecore.Resources.Media;
@@ -400,11 +401,16 @@ namespace Sitecore.SharedSource.FieldSuite.Types
 			else
 			{
 				var str = new UrlString(args.Parameters["url"]);
-
+				UrlHandle urlHandle = new UrlHandle();
+				
+				
+				
 				if (args.Parameters["link"] != null && !string.IsNullOrEmpty(args.Parameters["link"]))
 				{
 					str.Append("va", args.Parameters["link"]);
+					urlHandle["va"] = args.Parameters["link"];
 				}
+				urlHandle.Add(str);
 
 				str.Append("ro", Source);
 				if ((UIUtil.IsIE() && (GetIEEngineBasedVersion() == 9)) && (args.Parameters["umwn"] == "1"))
