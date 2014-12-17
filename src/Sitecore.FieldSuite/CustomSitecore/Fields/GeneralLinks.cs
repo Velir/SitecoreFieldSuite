@@ -303,7 +303,7 @@ namespace Sitecore.SharedSource.FieldSuite.Types
 					GeneralLinkItem linkItem = LinkItems[i];
 					if (linkItem.LinkId == selectedLink.LinkId)
 					{
-						linkItem.LinkText = args.Result;
+						linkItem.LinkText = HttpUtility.HtmlEncode(args.Result);
 						LinkItems[i] = linkItem;
 
 						//update new field value
