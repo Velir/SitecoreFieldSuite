@@ -16,6 +16,7 @@ using Sitecore.Data.Managers;
 using Sitecore.Diagnostics;
 using Sitecore.Globalization;
 using Sitecore.Resources;
+using Sitecore.Security.Accounts;
 using Sitecore.Shell;
 using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Shell.Applications.ContentEditor.Pipelines.RenderContentEditor;
@@ -134,7 +135,7 @@ namespace Sitecore.SharedSource.FieldSuite.Editors.ContentEditor
 			Item fieldType = this.GetFieldType(itemField);
 			if (fieldType != null)
 			{
-				if (!itemField.CanWrite)
+				if (!itemField.CanUserWrite(User.Current))
 				{
 					readOnly = true;
 				}
@@ -191,7 +192,7 @@ namespace Sitecore.SharedSource.FieldSuite.Editors.ContentEditor
 				if (!UserOptions.ContentEditor.ShowRawValues)
 				{
 					Item item = children["Menu"];
-					if (((item != null) && item.HasChildren) && UserOptions.View.UseSmartTags)
+					if (((item != null) && item.HasChildren))
 					{
 						str = item.Children[0]["Display Name"];
 						count = item.Children.Count;
@@ -238,13 +239,6 @@ namespace Sitecore.SharedSource.FieldSuite.Editors.ContentEditor
 					              		StringUtil.EscapeJavascriptString(str), ",\"", count, "\")'", str4, ">"
 					              	});
 				this.AddLiteralControl(parent, str7);
-			}
-			else if (UserOptions.View.UseSmartTags)
-			{
-				string str8 =
-					"<div onmouseover=\"javascript:scContent.smartTag(this, event)\" onactivate=\"javascript:scContent.smartTag(this, event)\"" +
-					str4 + ">";
-				this.AddLiteralControl(parent, str8);
 			}
 			else
 			{
@@ -345,7 +339,7 @@ namespace Sitecore.SharedSource.FieldSuite.Editors.ContentEditor
 				str4 = " title=\"" + itemField.Description + "\"";
 			}
 			string str5 = "scEditorFieldLabel";
-			if ((UserOptions.View.UseSmartTags && !readOnly) && !UserOptions.ContentEditor.ShowRawValues)
+			if ((!readOnly) && !UserOptions.ContentEditor.ShowRawValues)
 			{
 				Item item2 = fieldType.Children["Menu"];
 				if (item2 != null)

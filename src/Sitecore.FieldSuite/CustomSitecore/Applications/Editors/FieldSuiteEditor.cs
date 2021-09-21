@@ -92,7 +92,7 @@ namespace Sitecore.SharedSource.FieldSuite.Editors
 		{
 			Sitecore.Diagnostics.Assert.ArgumentNotNull(item, "item");
 			Sitecore.Diagnostics.Assert.ArgumentNotNull(tabs, "tabs");
-			string customEditor = item.Appearance.CustomEditor;
+			string customEditor = item.Fields["__Editor"].Value;
 			if (!string.IsNullOrEmpty(customEditor))
 			{
 				EditorTab tab = GetEditorTab("CustomEditor", Translate.Text("Custom Editor"), "Applications/16x16/form_blue.png",
@@ -769,7 +769,7 @@ namespace Sitecore.SharedSource.FieldSuite.Editors
 			output.Write("<tr><td>");
 			output.Write(Translate.Text("Created From:"));
 			output.Write("</td><td>");
-			if (ItemUtil.IsNull(item.BranchId))
+			if (Data.ID.IsNullOrEmpty(item.BranchId))
 			{
 				output.Write(Translate.Text("[unknown]"));
 			}
