@@ -44,6 +44,11 @@
 	border:none;
 }
 
+.addRemoveButton a img
+{
+	display: inline;
+}
+
 .addRemoveButton
 {
 	margin-top:4px;
