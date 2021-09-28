@@ -53,6 +53,10 @@ namespace Sitecore.SharedSource.FieldSuite.Types
         {
             this.Value = item.Fields[fieldName].ToString();
         }
+		private void ParseSpecialCharater(char v1, string v2)
+		{
+			this.Value = this.Value.Replace(v1.ToString(), v2);
+		}
 
 		public GeneralLinks(Item item, TextField field)
             : this(item, field.InnerField.Name)
@@ -120,12 +124,14 @@ namespace Sitecore.SharedSource.FieldSuite.Types
 				{
 					return new List<GeneralLinkItem>();
 				}
-
-				TextReader textReader = new StringReader(Value);
-
+				
+				//TextReader textReader = new StringReader(Value);
+				 //& in string must be replaced with &amp; else it will break
+				ParseSpecialCharater('&', "&amp;");
 				XmlDocument document = new XmlDocument();
-				document.Load(textReader);
-
+				//document.Load(textReader);
+				document.LoadXml(Value);
+				
 				XDocument xDocument = XDocument.Load(document.CreateNavigator().ReadSubtree());
 
 				IEnumerable<XElement> items = xDocument.Descendants("link").ToList();
