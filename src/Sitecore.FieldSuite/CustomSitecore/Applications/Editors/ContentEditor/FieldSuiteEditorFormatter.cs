@@ -235,8 +235,10 @@ namespace Sitecore.SharedSource.FieldSuite.Editors.ContentEditor
 					              	{
 					              		"<div onactivate='javascript:scContent.smartTag(this, event, \"", field.ControlID, "\", ",
 					              		StringUtil.EscapeJavascriptString(str), ",\"", count,
-					              		"\")' onmouseover='javascript:scContent.smartTag(this, event, \"", field.ControlID, "\", ",
-					              		StringUtil.EscapeJavascriptString(str), ",\"", count, "\")'", str4, ">"
+					              		"\")'"
+										//onmouseover='javascript:scContent.smartTag(this, event, \"", field.ControlID, "\", ",
+										//StringUtil.EscapeJavascriptString(str), ",\"", count, "\")'"
+										, str4, ">"
 					              	});
 				this.AddLiteralControl(parent, str7);
 			}
